@@ -36,14 +36,12 @@ body{
 );
 }
 .gda_services {
-    display: grid;
     place-items: center; 
     background-color: #fff;
-	padding: 10px;
-	padding-top: 1em;
 	border-radius: 15px;
 	text-align: center;
 	height: 319px;
 	width: 432px;
 	box-shadow: 0 8px 16px rgba(0,0,0,0.25);
 }
+

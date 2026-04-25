@@ -192,6 +192,27 @@
     </section>
   </div>
 
+  <div class="container-fluid gda_status">
+    <section class="row text-center">
+      <div class="col-lg-3 col-12">
+        <h4 class="gda_status_subtitle">1.200+</h4>
+        <p class="gda_status_text">Processos Ativos</p>
+      </div>
+      <div class="col-lg-3 col-12">
+        <h4 class="gda_status_subtitle">45</h4>
+        <p class="gda_status_text">Empresas Clientes</p>
+      </div>
+      <div class="col-lg-3 col-12">
+        <h4 class="gda_status_subtitle">98%</h4>
+        <p class="gda_status_text">Satisfação</p>
+      </div>
+      <div class="col-lg-3 col-12">
+        <h4 class="gda_status_subtitle">24/7</h4>
+        <p class="gda_status_text">Suporte</p>
+      </div>
+    </section>
+  </div>
+
 
 
 

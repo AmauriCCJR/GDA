@@ -209,3 +209,22 @@ body {
 	color: #8C8C8C;
 	font-size: 14px;
 }
+
+.gda_status{
+	background-image: linear-gradient(
+		to right,
+		#009666,
+		#007B6E);
+		color: white;
+		padding: 50px 0;
+}
+
+.gda_status_subtitle{
+	font-size: 48px;
+	font-weight: 700;
+
+}
+.gda_status_text{
+	font-size: 16px;
+	font-weight: 600;
+}

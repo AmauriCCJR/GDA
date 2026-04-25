@@ -47,7 +47,7 @@
     <article class="container">
       <div class="row align-items-center">
 
-        <div class="col-lg-7 col-12">
+        <div class="col-lg-6 col-12">
           <h1 class="display-5 fw-bold text-dark gda_title_home">
             Gestão Completa da Documentação de Processos Aduaneiros
           </h1>
@@ -62,7 +62,7 @@
             <a class="btn btn-outline-success">Saiba Mais</a>
           </div>
         </div>
-        <div class="col-lg-5 col-md-12 col-12 d-flex flex-column align-items-start justify-content-center gda_services gap-3 mt-4 mt-lg-0 mx-auto">
+        <div class="col-lg-5 col-12 d-flex flex-column align-items-start justify-content-center gda_services gap-3 mt-4 mt-lg-0 mx-auto">
           <p class="ps-5"><i class="fa-regular fa-circle-check" id="gda_color_1"></i> Processos 100% digitalizados</p>
           <p class="ps-5"><i class="fa-regular fa-circle-check" id="gda_color_2"></i> Atualizações de status dos processos</p>
           <p class="ps-5"><i class="fa-regular fa-circle-check" id="gda_color_3"></i> Gestão de Múltiplas Empresas</p>
@@ -82,22 +82,22 @@
 
 
     <div class="row gda_servicos_completos gap-4">
-      <section class="col-lg-3 col-md-12 col-12 gda_services_card" style="--corVariavel: #2563EB">
+      <section class="col-lg-3 col-md-6 col-12 gda_services_card" style="--corVariavel: #2563EB">
         <img src="../assets/img/Importar.png" class="gda_icon_home" alt="...">
         <h5 class="gda_services_card_title">Importação</h5>
         <p class="card-text">Gestão completa de processos de importação com controle de documentos e prazos</p>
       </section>
-      <section class="col-lg-3 col-md-12 col-12 gda_services_card" style="--corVariavel: #00806a">
+      <section class="col-lg-3 col-md-6 col-12 gda_services_card" style="--corVariavel: #00806a">
         <img src="../assets/img/Exportar.png" class="gda_icon_home" alt="...">
         <h5 class="gda_services_card_title">Exportação</h5>
         <p class="card-text">Acompanhamento de exportações com validação de documentos</p>
       </section>
-      <section class="col-lg-3 col-md-12 col-12 gda_services_card" style="--corVariavel: #FFCD29">
+      <section class="col-lg-3 col-md-6 col-12 gda_services_card" style="--corVariavel: #FFCD29">
         <img src="../assets/img/Banco.png" class="gda_icon_home" alt="...">
         <h5 class="gda_services_card_title">Armazenamento</h5>
         <p class="card-text">Controle digital de armazenagem e movimentação de cargas</p>
       </section>
-      <section class="col-lg-3 col-md-12 col-12 gda_services_card" style="--corVariavel: #FF0000">
+      <section class="col-lg-3 col-md-6 col-12 gda_services_card" style="--corVariavel: #FF0000">
         <img src="../assets/img/Pessoa.png" class="gda_icon_home" alt="...">
         <h5 class="gda_services_card_title">Consultoria</h5>
         <p class="card-text">Suporte especializado para otimizar suas operações aduaneiras</p>
@@ -115,55 +115,82 @@
       </div>
 
       <div class="row justify-content-center gap-2  ">
-          <div class="col-lg-2 col-12">
-            <div class="gda_cotacao_card">
-              <h5 class="gda_cotacao_title">Dólar - USD</h5>
-              <p class='gda_cotacao_valor'>R$: <?php echo CotacaoAtual('USD-BRL'); ?></p>
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-12">
-            <div class="gda_cotacao_card">
-              <h5 class="gda_cotacao_title">Euro - EUR</h5>
-              <p class='gda_cotacao_valor'>R$: <?php echo CotacaoAtual('EUR-BRL'); ?></p>
-            </div>
-          </div>
-
-
-          <div class="col-lg-2 col-12">
-            <div class="gda_cotacao_card">
-              <h5 class="gda_cotacao_title">Guaranies - PYG</h5>
-              <p class='gda_cotacao_valor'>R$: <?php echo CotacaoAtual('PYG-BRL'); ?></p>
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-12">
-            <div class="gda_cotacao_card">
-              <h5 class="gda_cotacao_title">Libras Esterfinas - GBP</h5>
-              <p class='gda_cotacao_valor'>R$: <?php echo CotacaoAtual('GBP-BRL'); ?></p>
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-12">
-            <div class="gda_cotacao_card">
-              <h5 class="gda_cotacao_title">Dolar Canadense</h5>
-              <p class='gda_cotacao_valor'>R$: <?php echo CotacaoAtual('CAD-BRL'); ?></p>
-            </div>
+        <div class="col-lg-2 col-12">
+          <div class="gda_cotacao_card">
+            <h5 class="gda_cotacao_title">Dólar - USD</h5>
+            <p class='gda_cotacao_valor'>R$: <?php echo CotacaoAtual('USD-BRL'); ?></p>
           </div>
         </div>
 
-        
-        </section>
+        <div class="col-lg-2 col-12">
+          <div class="gda_cotacao_card">
+            <h5 class="gda_cotacao_title">Euro - EUR</h5>
+            <p class='gda_cotacao_valor'>R$: <?php echo CotacaoAtual('EUR-BRL'); ?></p>
+          </div>
+        </div>
+
+
+        <div class="col-lg-2 col-12">
+          <div class="gda_cotacao_card">
+            <h5 class="gda_cotacao_title">Guaranies - PYG</h5>
+            <p class='gda_cotacao_valor'>R$: <?php echo CotacaoAtual('PYG-BRL'); ?></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-12">
+          <div class="gda_cotacao_card">
+            <h5 class="gda_cotacao_title">Libras Esterfinas - GBP</h5>
+            <p class='gda_cotacao_valor'>R$: <?php echo CotacaoAtual('GBP-BRL'); ?></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-12">
+          <div class="gda_cotacao_card">
+            <h5 class="gda_cotacao_title">Dolar Canadense</h5>
+            <p class='gda_cotacao_valor'>R$: <?php echo CotacaoAtual('CAD-BRL'); ?></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="container">
+    <section class="mt-5 mb-5 p-2">
+      <div class="row  text-center">
+        <h3 class="gda_subtitle_home">Empresas que confiam na GDA</h3>
+        <p class="lead"> Resultados reais de clientes satisfeitos</p>
+      </div>
+      <div class="row gap-3 justify-content-center">
+      <div class="col-lg-5 col-12 gda_avaliacao">
+        <h5 class="gda_avaliacao_title">60% mais rapido</h5>
+        <p class="gda_avaliacao_desc">"Reduzimos em 60% o tempo de processamento de documentos. A plataforma é intuitiva e resolve nossos principais problemas."</p>
+        <p class="gda_avaliacao_business">Importadora Alfa</p>
+        <p class="gda_avaliacao_autor">Fernanda Santos</p>
       </div>
 
-      <div class="container">
-        <section class="gda_color_bg mt-5 mb-5 p-2 text-center">
-          <div class="row">
-            <h3 class="gda_subtitle_home">Empresas que confiam na GDA</h3>
-            <p class="lead"> Resultados reais de clientes satisfeitos</p>
-          </div>
-        </section>
+      <div class="col-lg-5 col-12 gda_avaliacao">
+        <h5 class="gda_avaliacao_title">60% mais rapido</h5>
+        <p class="gda_avaliacao_desc">"Reduzimos em 60% o tempo de processamento de documentos. A plataforma é intuitiva e resolve nossos principais problemas."</p>
+        <p class="gda_avaliacao_business">Importadora Alfa</p>
+        <p class="gda_avaliacao_autor">Fernanda Santos</p>
       </div>
+      <div class="col-lg-5 col-12 gda_avaliacao">
+        <h5 class="gda_avaliacao_title">60% mais rapido</h5>
+        <p class="gda_avaliacao_desc">"Reduzimos em 60% o tempo de processamento de documentos. A plataforma é intuitiva e resolve nossos principais problemas."</p>
+        <p class="gda_avaliacao_business">Importadora Alfa</p>
+        <p class="gda_avaliacao_autor">Fernanda Santos</p>
+      </div>
+
+      <div class="col-lg-5 col-12 gda_avaliacao">
+        <h5 class="gda_avaliacao_title">60% mais rapido</h5>
+        <p class="gda_avaliacao_desc">"Reduzimos em 60% o tempo de processamento de documentos. A plataforma é intuitiva e resolve nossos principais problemas."</p>
+        <p class="gda_avaliacao_business">Importadora Alfa</p>
+        <p class="gda_avaliacao_autor">Fernanda Santos</p>
+      </div>
+
+</div>
+    </section>
+  </div>
 
 
 

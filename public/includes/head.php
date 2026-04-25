@@ -8,5 +8,9 @@
 <link rel="stylesheet" href="css/style.css">
 
 <?php 
-    require_once '../app/helpers/helper.php';
+    $caminho = 'app/helpers/helper.php';
+    while (!file_exists($caminho)) {
+        $caminho = '../' . $caminho;
+    }
+    require_once $caminho;
 ?>

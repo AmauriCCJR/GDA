@@ -1,0 +1,230 @@
+:root {
+	--corVariavel: (#fff);
+	--cor-btn: rgb(0, 128, 106);
+}
+
+body {
+	background-color: white;
+}
+
+.nav-item {
+	font-weight: 600;
+}
+
+.btn-outline-success {
+	background-color: white;
+}
+
+.btn {
+	padding: 10px;
+	border-radius: 15px;
+	justify-content: center;
+}
+
+.gda_login {
+	color: #14AE5C;
+	font-weight: 600;
+	margin: 0 15px;
+	text-decoration: none;
+}
+
+.gda_descricao_home {
+	color: #1e1e1e !important;
+	font-size: 16px;
+	line-height: 30px;
+	margin-bottom: 20px;
+}
+
+.gda_cor_btn {
+	background-color: var(--cor-btn);
+}
+
+.gda_bg {
+	padding: 5% 0;
+	background-image: linear-gradient(to right,
+			rgba(20, 174, 92, 0.2),
+			rgba(52, 167, 137, 0.2),
+			rgba(186, 197, 222, 0.2));
+}
+
+.gda_services {
+	background-color: #fff;
+	border-radius: 15px;
+	max-height: 319px;
+	max-width: 432px;
+	width: 100%;
+	height: 319px;
+	box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.3);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	font-weight: 600;
+
+}
+
+.gda_title_home {
+	color: #14AE5C !important;
+	font-size: 3rem;
+	font-weight: 700;
+	line-height: 1.2;
+	margin-bottom: 20px;
+}
+
+.gda_subtitle_home {
+	color: #009966 !important;
+	font-size: 2.5rem;
+	font-weight: 700;
+	line-height: 1.2;
+	margin-bottom: 20px;
+}
+
+#gda_color_1 {
+	color: #FF990B;
+	width: 24px;
+	height: 24px;
+}
+
+#gda_color_2 {
+	color: #2563EB;
+	width: 24px;
+	height: 24px;
+}
+
+#gda_color_3 {
+	color: #E4E402;
+	width: 24px;
+	height: 24px;
+}
+
+#gda_color_4 {
+	color: #FF0000;
+	width: 24px;
+	height: 24px;
+}
+
+.gda_color_bg {
+	background-color: #fff;
+}
+
+.gda_servicos_completos {
+	margin-bottom: 100px;
+}
+
+.gda_services_card {
+	text-align: center;
+	border: 2px solid color-mix(in srgb, var(--corVariavel), transparent 80%);
+	border-radius: 15px;
+	padding: 30px;
+	max-width: 300px;
+	margin: 0 auto;
+}
+
+.gda_services_card:hover {
+	border: 2px solid var(--corVariavel);
+	box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.3);
+	transition: all 0.3s ease-in-out;
+}
+
+.gda_icon_home {
+	width: 50px;
+	height: 50px;
+	margin: 15px auto
+}
+
+.gda_services_card_title {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: #000;
+}
+
+.cotacao {
+	background-color: #F9FAFB;
+}
+
+.cotacao-valores {
+	text-align: center;
+}
+
+.gda_cotacao_card {
+	border: 1px solid var(--cor-btn);
+	height: 100px;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.3);
+
+}
+.cotacao_title{
+	margin: 40px;
+}
+.cotacao_title_heading{
+	font-size: 29px;
+	font-weight: 600;
+}
+.cotacoes_espacing{
+	margin-bottom: 40px;
+}
+.gda_cotacao_title {
+	padding-top: 20px;
+	font-size: 15px;
+	font-weight: 600;
+	color: black;
+}
+
+.gda_cotacao_valor {
+	color: var(--cor-btn);
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+.gda_avaliacao{
+	border: 1px solid #14AE5C;
+	border-radius: 15px;
+	padding: 0 15px;
+	line-height: 20px;
+}
+.gda_avaliacao_title {
+	font-size: 20px;
+	padding: 15px;
+	font-weight: 650;
+	color: #204087;
+}
+.gda_avaliacao_desc{
+	font-size: 16px;
+	font-weight: 400;
+	color: #000000;
+	padding-left: 15px;
+}
+.gda_avaliacao_business{
+	color: #14AE5C;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 0 15px;
+
+}
+.gda_avaliacao_autor{
+	color: #8C8C8C;
+	font-size: 14px;
+}
+
+.gda_status{
+	background-image: linear-gradient(
+		to right,
+		#009666,
+		#007B6E);
+		color: white;
+		padding: 50px 0;
+}
+
+.gda_status_subtitle{
+	font-size: 48px;
+	font-weight: 700;
+
+}
+.gda_status_text{
+	font-size: 16px;
+	font-weight: 600;
+}

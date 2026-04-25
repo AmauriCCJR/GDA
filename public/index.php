@@ -129,30 +129,28 @@
           </div>
         </div>
 
-<?php 
-  /*
+
         <div class="col col-2">
           <div class="gda_cotacao_card">
             <h5 class="gda_cotacao_title">Guaranies - Gs</h5>
-            <p class='gda_cotacao_valor'>R$: <?php echo CotacaoAtualGuarani('PYGBRL'); ?></p>
+            <p class='gda_cotacao_valor'>R$: <?php echo CotacaoAtualGuarani('PYG-BRL'); ?></p>
           </div>
         </div>
 
         <div class="col col-2">
           <div class="gda_cotacao_card">
             <h5 class="gda_cotacao_title">Libras Esterfinas - GBP</h5>
-            <p class='gda_cotacao_valor'>R$: <?php echo CotacaoAtual('GBPBRL'); ?> ?></p>
+            <p class='gda_cotacao_valor'>R$: <?php echo CotacaoAtual('GBP-BRL'); ?> ?></p>
           </div>
         </div>
 
         <div class="col col-2">
           <div class="gda_cotacao_card">
             <h5 class="gda_cotacao_title">Dolar Canadense</h5>
-            <p class='gda_cotacao_valor'>R$: <?php echo CotacaoAtual('CADBRL'); ?></p>
+            <p class='gda_cotacao_valor'>R$: <?php echo CotacaoAtual('CAD-BRL'); ?></p>
           </div>
         </div>
-*/
-      ?>
+
       </div>
       </div>
       

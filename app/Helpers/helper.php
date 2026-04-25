@@ -10,6 +10,7 @@ function RetornoChaveApi()
 
 function CotacaoAtual($siglaPais)
 {
+    /*
     $token = RetornoChaveApi();
     if ($siglaPais === 'PYG-BRL') {
         $url = "https://economia.awesomeapi.com.br/json/last/{$siglaPais}?token={$token}";
@@ -32,4 +33,5 @@ function CotacaoAtual($siglaPais)
         $cotacao = $data[$chave]['bid'] ?? "Cotação não encontrada";
         return number_format($cotacao, 2, ',', '.');
     }
+    */
 }

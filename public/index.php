@@ -113,16 +113,16 @@
           <p class="lead"> Acompanhe aqui as principais moedas para suas operações</p>
         </div>
       </div>
-      <div class="cotacao-valores">
-        <div class="row">
-          <div class="col col-2">
+
+      <div class="row justify-content-center gap-2">
+          <div class="col-lg-2 col-md-4 col-12">
             <div class="gda_cotacao_card">
               <h5 class="gda_cotacao_title">Dólar - USD</h5>
               <p class='gda_cotacao_valor'>R$: <?php echo CotacaoAtual('USD-BRL'); ?></p>
             </div>
           </div>
 
-          <div class="col col-2">
+          <div class="col-lg-2 col-md-4 col-12">
             <div class="gda_cotacao_card">
               <h5 class="gda_cotacao_title">Euro - EUR</h5>
               <p class='gda_cotacao_valor'>R$: <?php echo CotacaoAtual('EUR-BRL'); ?></p>
@@ -130,21 +130,21 @@
           </div>
 
 
-          <div class="col col-2">
+          <div class="col-lg-2 col-md-4 col-12">
             <div class="gda_cotacao_card">
-              <h5 class="gda_cotacao_title">Guaranies - Gs</h5>
+              <h5 class="gda_cotacao_title">Guaranies - PYG</h5>
               <p class='gda_cotacao_valor'>R$: <?php echo CotacaoAtual('PYG-BRL'); ?></p>
             </div>
           </div>
 
-          <div class="col col-2">
+          <div class="col-lg-2 col-md-4 col-12">
             <div class="gda_cotacao_card">
               <h5 class="gda_cotacao_title">Libras Esterfinas - GBP</h5>
               <p class='gda_cotacao_valor'>R$: <?php echo CotacaoAtual('GBP-BRL'); ?></p>
             </div>
           </div>
 
-          <div class="col col-2">
+          <div class="col-lg-2 col-md-4 col-12">
             <div class="gda_cotacao_card">
               <h5 class="gda_cotacao_title">Dolar Canadense</h5>
               <p class='gda_cotacao_valor'>R$: <?php echo CotacaoAtual('CAD-BRL'); ?></p>

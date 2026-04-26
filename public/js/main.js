@@ -11,7 +11,7 @@ function enviarWhatsApp() {
         const mensagem = document.getElementById('mensagem').value;
 
         // Validação simples
-        if(!nome || !documento || !telefone) {
+        if(!nome || !documento || !telefone || !email) {
             alert("Por favor, preencha todos os campos obrigatórios.");
             return;
         }

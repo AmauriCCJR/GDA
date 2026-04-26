@@ -309,7 +309,7 @@
 
           <div class="gda-input-field">
             <input type="text" id="empresa" placeholder=" " required>
-            <label for="empresa">Empresa*</label>
+            <label for="empresa">Empresa</label>
           </div>
 
           <div class="gda-input-field">

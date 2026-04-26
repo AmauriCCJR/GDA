@@ -294,7 +294,7 @@
         <p class="lead">(Campos com * são obrigatórios para o envio da mensagem)</p>
       </section>
 
-      <div class="container col-lg-6 col-12 mx-auto gda_plano_ativo p-4">
+      <div class="container col-lg-6 col-10 mx-auto gda_plano_ativo p-4">
         <form id="whatsappForm">
 
           <div class="gda-input-field">
@@ -336,7 +336,7 @@
     </div>
   </div>
   </div>
-  <footer>
+  <footer class="container-fluid text-center">
     <?php include 'includes/footer.php'; ?>
   </footer>
 

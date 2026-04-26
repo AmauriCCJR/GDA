@@ -114,7 +114,7 @@
         </div>
       </div>
 
-      <div class="row justify-content-center gap-2  ">
+      <div class="row justify-content-center gap-2 gda_cotacao_space">
         <div class="col-lg-2 col-12">
           <div class="gda_cotacao_card">
             <h5 class="gda_cotacao_title">Dólar - USD</h5>
@@ -213,16 +213,129 @@
     </section>
   </div>
 
+  <div class="container">
+    <div class="row">
+      <section class="planos text-center py-2 p-2">
+        <div class="row">
+          <h2 class="planos_title">Panos que Crescem com seu negócio</h2>
+          <p class="lead">Escolha o plano ideal para sua operação</p>
+        </div>
 
 
+        <div class="row gap-5 justify-content-center py-5">
+          <div class="col-lg-3 col-md-6 col-10 gda_planos_card">
+            <h5 class="gda_planos_title">Starter</h5>
+            <p class="gda_planos_desc">Para pequenas operações.</p>
+            <p class="gda_planos_valores">R$299<span class="gda_planos_mes"> /mês</span></p>
+            <div class="gda_planos_features">
+              <p class=""><i class="fa-regular fa-circle-check gda_color_5"></i> Até 50 processos/mês</p>
+              <p class=""><i class="fa-regular fa-circle-check gda_color_5"></i> 3 usuários inclusos</p>
+              <p class=""><i class="fa-regular fa-circle-check gda_color_5"></i> 5GB de armazenamento</p>
+              <p class=""><i class="fa-regular fa-circle-check gda_color_5"></i> Suporte por Whatsapp</p>
+              <p class=""><i class="fa-regular fa-circle-check gda_color_5"></i> Relatórios básicos</p>
+            </div>
+            <a href="#" class="btn btn-outline-success">Começar Agora</a>
+          </div>
 
+          <div class="col-lg-3 col-md-6 col-10 gda_planos_card gda_plano_ativo">
+            <h5 class="gda_planos_title">Professional</h5>
+            <p class="gda_planos_desc">Para empresas em crescimento</p>
+            <p class="gda_planos_valores">R$699<span class="gda_planos_mes"> /mês</span></p>
+            <div class="gda_planos_features">
+              <p class=""><i class="fa-regular fa-circle-check gda_color_5"></i> Até 200 processos/mês</p>
+              <p class=""><i class="fa-regular fa-circle-check gda_color_5"></i> 10 usuários inclusos</p>
+              <p class=""><i class="fa-regular fa-circle-check gda_color_5"></i> 500GB de armazenamento</p>
+              <p class=""><i class="fa-regular fa-circle-check gda_color_5"></i> Suporte por Whatsapp</p>
+              <p class=""><i class="fa-regular fa-circle-check gda_color_5"></i> Relatórios avançados</p>
+            </div>
+            <a href="#" class="btn btn-success">Começar Agora</a>
+          </div>
 
+          <div class="col-lg-3 col-md-6 col-10 gda_planos_card">
+            <h5 class="gda_planos_title">Enterprise</h5>
+            <p class="gda_planos_desc">Para grandes operações.</p>
+            <p class="gda_planos_valores">Custom</p>
+            <div class="gda_planos_features">
+              <p class=""><i class="fa-regular fa-circle-check gda_color_5"></i> Processos ilimitados</p>
+              <p class=""><i class="fa-regular fa-circle-check gda_color_5"></i> Usuários ilimitados</p>
+              <p class=""><i class="fa-regular fa-circle-check gda_color_5"></i> Armazenamento ilimitado</p>
+              <p class=""><i class="fa-regular fa-circle-check gda_color_5"></i> Suporte 24/7 dedicado</p>
+              <p class=""><i class="fa-regular fa-circle-check gda_color_5"></i> Treinamento presencial</p>
+            </div>
+            <a href="#" class="btn btn-outline-success">Começar Agora</a>
+          </div>
+      </section>
+    </div>
 
+    <div class="row">
+      <section class="col-9 mx-auto py-5 gda_plano_ativo">
+        <h2 class="text-center">Perguntas frequentes sobre os Planos</h2>
 
+        <div class="gda_perguntas">
+          <b class="">Posso trocar de plano?</b>
+          <p class="">Sim! Você pode fazer upgrade ou downgrade a qualquer momento.</p>
 
+          <b class="">Há período de teste?</b>
+          <p class="">Oferecemos 14 dias grátis em todos os planos, sem necessidade de cartão.</p>
 
+          <b class="">Como funciona o pagamento?</b>
+          <p class="">Aceitamos cartão de crédito, boleto e PIX. Cobrança mensal ou anual com desconto.</p>
 
+          <b class="">E se eu exceder o limite?</b>
+          <p class="">Você será notificado e poderá fazer upgrade ou pagar por processos adicionais.</p>
+        </div>
+      </section>
+    </div>
 
+    <div class="row">
+      <section class="col-12 text-center py-5">
+        <h2 class="gda_subtitle_home">Pronto para transformar sua Operação?</h2>
+        <p class="lead">Solicite uma demonstração gratuita e veja como o GDA pode otimizar seus processos aduaneiros</p>
+        <p class="lead">(Campos com * são obrigatórios para o envio da mensagem)</p>
+      </section>
+
+      <div class="container col-lg-6 col-12 mx-auto gda_plano_ativo p-4">
+        <form id="whatsappForm">
+
+          <div class="gda-input-field">
+            <input type="text" id="nome" placeholder=" " required>
+            <label for="nome">Nome Completo*</label>
+          </div>
+
+          <div class="gda-input-field">
+            <input type="email" id="email" placeholder=" " required>
+            <label for="email">E-mail*</label>
+          </div>
+
+          <div class="gda-input-field">
+            <input type="text" id="empresa" placeholder=" " required>
+            <label for="empresa">Empresa*</label>
+          </div>
+
+          <div class="gda-input-field">
+            <input type="text" id="documento" placeholder=" " required>
+            <label for="documento">CPF/CNPJ*</label>
+          </div>
+
+          <div class="gda-input-field">
+            <input type="tel" id="telefone" placeholder=" " required>
+            <label for="telefone">Telefone*</label>
+          </div>
+
+          <div class="gda-input-field">
+            <input id="mensagem" placeholder=" "></input>
+            <label for="mensagem">Mensagem opcional</label>
+          </div>
+
+          <button type="button" class="btn btn-success w-100 mt-3" onclick="enviarWhatsApp()">
+            <i class="fa-brands fa-whatsapp iconzap"></i>
+            Enviar via WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
   <footer>
     <?php include 'includes/footer.php'; ?>
   </footer>

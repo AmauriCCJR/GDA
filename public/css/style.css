@@ -103,6 +103,17 @@ body {
 	height: 24px;
 }
 
+.gda_color_5 {
+	color: #14AE5C;
+	width: 24px;
+	height: 24px;
+}
+.iconzap {
+	color: #ffffff;
+	width: 24px;
+	height: 24px;
+}
+
 .gda_color_bg {
 	background-color: #fff;
 }
@@ -157,21 +168,29 @@ body {
 	box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.3);
 
 }
-.cotacao_title{
+
+.cotacao_title {
 	margin: 40px;
 }
-.cotacao_title_heading{
+
+.cotacao_title_heading {
 	font-size: 29px;
 	font-weight: 600;
 }
-.cotacoes_espacing{
+
+.cotacoes_espacing {
 	margin-bottom: 40px;
 }
+
 .gda_cotacao_title {
 	padding-top: 20px;
 	font-size: 15px;
 	font-weight: 600;
 	color: black;
+}
+
+.gda_cotacao_space {
+	padding: 20px 0 50px 0;
 }
 
 .gda_cotacao_valor {
@@ -180,51 +199,166 @@ body {
 	font-weight: 500;
 }
 
-.gda_avaliacao{
+.gda_avaliacao {
 	border: 1px solid #14AE5C;
 	border-radius: 15px;
 	padding: 0 15px;
 	line-height: 20px;
 }
+
 .gda_avaliacao_title {
 	font-size: 20px;
 	padding: 15px;
 	font-weight: 650;
 	color: #204087;
 }
-.gda_avaliacao_desc{
+
+.gda_avaliacao_desc {
 	font-size: 16px;
 	font-weight: 400;
 	color: #000000;
 	padding-left: 15px;
 }
-.gda_avaliacao_business{
+
+.gda_avaliacao_business {
 	color: #14AE5C;
 	font-size: 16px;
 	font-weight: 600;
 	padding: 0 15px;
 
 }
-.gda_avaliacao_autor{
+
+.gda_avaliacao_autor {
 	color: #8C8C8C;
 	font-size: 14px;
 }
 
-.gda_status{
-	background-image: linear-gradient(
-		to right,
-		#009666,
-		#007B6E);
-		color: white;
-		padding: 50px 0;
+.gda_status {
+	background-image: linear-gradient(to right,
+			#009666,
+			#007B6E,
+			#007B6E);
+	color: white;
+	padding: 50px 0;
 }
 
-.gda_status_subtitle{
+.gda_status_subtitle {
 	font-size: 48px;
 	font-weight: 700;
 
 }
-.gda_status_text{
+
+.gda_status_text {
 	font-size: 16px;
 	font-weight: 600;
+}
+
+.planos_title {
+	color: #000;
+	font-size: 32px;
+	font-weight: 600;
+	padding: 40px 0 10px 0;
+}
+
+.gda_planos_card {
+	border: 1px solid #00000038;
+	border-radius: 15px;
+	padding: 30px;
+}
+
+.gda_planos_card:hover {
+	border: 1.5px solid var(--cor-btn);
+	box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.3);
+	transition: all 0.3s ease-in-out;
+}
+
+.gda_plano_ativo {
+	border: 1.5px solid var(--cor-btn);
+	border-radius: 15px;
+	padding: 30px;
+}
+
+.gda_planos_title {
+	font-size: 20px;
+	font-weight: 600;
+	color: #000000;
+}
+
+.gda_planos_valores {
+	font-size: 24px;
+	font-weight: 600;
+	color: black;
+
+}
+
+.gda_planos_mes {
+	font-size: 16px;
+	color: #51515188;
+}
+
+.gda_planos_features {
+	text-align: left;
+	padding-left: 30px;
+	align-items: center;
+}
+
+.gda_planos_features_active {
+	text-align: left;
+	padding-left: 30px;
+	align-items: center;
+	border: 1px solid var(--cor-btn);
+	border-radius: 15px;
+}
+
+.gda_perguntas {
+	padding: 10px 50px;
+}
+
+/* testes */
+.gda-input-field{
+	position: relative;
+	margin-top: 30px;
+	padding: 0 30px;
+}
+
+/* Estilo básico do Input */
+.gda-input-field input {
+	width: 100%;
+	padding: 10px;
+	border: 2px solid #ccc;
+	border-radius: 15px;
+	outline: none;
+	font-size: 16px;
+	transition: border-color 0.3s;
+}
+
+/* Estilo básico do Label */
+.gda-input-field label {
+	position: absolute;
+	left: 10px;
+	top: -25px;
+	/* Começa acima do input */
+	background-color: white;
+	padding: 0 5px;
+	color: #515151;
+	font-size: 16px;
+	font-weight: 500;
+	transition: all 0.3s ease;
+	pointer-events: none;
+	/* Garante que o clique passe para o input */
+}
+
+/* Efeito ao clicar (Focus) ou quando houver texto (Valid) */
+.gda-input-field input:focus+label,
+.gda-input-field input:not(:placeholder-shown)+label {
+	top: -10px;
+	/* Desce até a borda */
+	font-size: 12px;
+	color: var(--cor-btn);
+	font-weight: bold;
+}
+
+/* Muda a cor da borda quando focado */
+.gda-input-field input:focus {
+	border-color: var(--cor-btn);
 }

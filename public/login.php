@@ -40,7 +40,7 @@
           <input class="form-check-input" type="checkbox" id="lembrarMe">
           <label class="form-check-label gda_check_label" for="lembrarMe">Lembrar-me</label>
         </div>
-        <a href="#" class="gda_forgot_link">Esqueci minha senha</a>
+        <a href="recuperar_senha.php" class="gda_forgot_link">Esqueci minha senha</a>
       </div>
 
       <a class="btn btn-success w-100 gda_btn_login gda_cor_btn" href="loading.php">Entrar</a>

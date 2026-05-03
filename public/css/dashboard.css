@@ -1,0 +1,608 @@
+/* ================================================
+   GDA DASHBOARD — Estilos Compartilhados
+   Adicione este arquivo ao seu projeto como:
+   css/dashboard.css
+   ================================================ */
+
+:root {
+  --gda-green:       #009666;
+  --gda-green-dark:  #007B6E;
+  --gda-green-light: rgba(0, 150, 102, 0.10);
+  --gda-text:        #1e1e1e;
+  --gda-muted:       #6b7280;
+  --gda-border:      #e5e7eb;
+  --gda-bg:          #f3f4f6;
+  --gda-white:       #ffffff;
+  --gda-orange:      #f59e0b;
+  --gda-red:         #ef4444;
+  --gda-blue:        #2563eb;
+}
+
+/* ---------- RESET BÁSICO ---------- */
+body.gda-dash-body {
+  background-color: var(--gda-bg);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: var(--gda-text);
+  min-height: 100vh;
+}
+
+/* ---------- TOPBAR ---------- */
+.gda-topbar {
+  background: linear-gradient(135deg, var(--gda-green), var(--gda-green-dark));
+  padding: 0 32px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+.gda-topbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.gda-topbar-logo {
+  height: 46px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+.gda-topbar-title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.gda-topbar-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gda-topbar-user-info {
+  text-align: right;
+}
+
+.gda-topbar-user-name {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.gda-topbar-user-email {
+  color: rgba(255,255,255,0.72);
+  font-size: 12px;
+}
+
+.gda-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255,255,255,0.22);
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ---------- NAVBAR TABS ---------- */
+.gda-tabs-bar {
+  background: var(--gda-white);
+  border-radius: 14px;
+  padding: 8px;
+  margin: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.gda-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gda-muted);
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.gda-tab:hover {
+  background: var(--gda-green-light);
+  color: var(--gda-green);
+}
+
+.gda-tab.active {
+  background: var(--gda-green);
+  color: #fff;
+}
+
+.gda-tab i {
+  font-size: 15px;
+}
+
+/* ---------- CONTENT AREA ---------- */
+.gda-content {
+  padding: 0 24px 32px 24px;
+}
+
+/* ---------- STAT CARDS (top row) ---------- */
+.gda-stat-card {
+  background: var(--gda-white);
+  border: 1.5px solid var(--gda-border);
+  border-radius: 14px;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 88px;
+  transition: box-shadow 0.2s;
+}
+
+.gda-stat-card:hover {
+  box-shadow: 0 4px 16px rgba(0,150,102,0.1);
+}
+
+.gda-stat-icon {
+  font-size: 36px;
+  color: var(--gda-green);
+  flex-shrink: 0;
+  width: 48px;
+  text-align: center;
+}
+
+.gda-stat-label {
+  font-size: 13px;
+  color: var(--gda-muted);
+  margin-bottom: 4px;
+}
+
+.gda-stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--gda-green);
+  line-height: 1;
+}
+
+/* ---------- PANEL CARDS (medium cards) ---------- */
+.gda-panel {
+  background: var(--gda-white);
+  border: 1.5px solid var(--gda-border);
+  border-radius: 14px;
+  padding: 22px 24px;
+  height: 100%;
+}
+
+.gda-panel-title {
+  color: var(--gda-green);
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* ---------- COTAÇÕES ---------- */
+.gda-cotacao-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.gda-cotacao-item {
+  border: 1.5px solid var(--gda-border);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.gda-cotacao-label {
+  font-size: 12px;
+  color: var(--gda-muted);
+  margin-bottom: 2px;
+}
+
+.gda-cotacao-valor {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gda-green);
+}
+
+.gda-cotacao-dots {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.gda-cotacao-dot {
+  width: 24px;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--gda-border);
+}
+
+.gda-cotacao-dot.active {
+  background: var(--gda-green);
+}
+
+/* ---------- TOP CLIENTES / EMPRESAS ---------- */
+.gda-top-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--gda-border);
+}
+
+.gda-top-item:last-child {
+  border-bottom: none;
+}
+
+.gda-top-item-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.gda-dot-green  { width: 10px; height: 10px; border-radius: 50%; background: var(--gda-green); flex-shrink: 0; }
+.gda-dot-yellow { width: 10px; height: 10px; border-radius: 50%; background: var(--gda-orange); flex-shrink: 0; }
+.gda-dot-red    { width: 10px; height: 10px; border-radius: 50%; background: var(--gda-red); flex-shrink: 0; }
+
+.gda-top-badge {
+  background: var(--gda-bg);
+  border-radius: 20px;
+  padding: 3px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gda-text);
+}
+
+/* ---------- STATUS ---------- */
+.gda-status-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--gda-border);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.gda-status-item:last-child { border-bottom: none; }
+
+.gda-status-count {
+  background: var(--gda-bg);
+  border-radius: 20px;
+  padding: 3px 14px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ---------- BARCHART ---------- */
+.gda-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.gda-bar-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gda-green);
+  width: 28px;
+  flex-shrink: 0;
+}
+
+.gda-bar-track {
+  flex: 1;
+  background: var(--gda-border);
+  border-radius: 20px;
+  height: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.gda-bar-fill {
+  height: 100%;
+  background: var(--gda-green);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  min-width: 28px;
+}
+
+/* ---------- PROCESSOS RECENTES ---------- */
+.gda-proc-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--gda-border);
+}
+
+.gda-proc-item:last-child { border-bottom: none; }
+
+.gda-proc-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.gda-proc-type {
+  font-size: 12px;
+  color: var(--gda-green);
+  margin-top: 2px;
+}
+
+.gda-badge-andamento {
+  background: var(--gda-orange);
+  color: #fff;
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.gda-badge-concluido {
+  background: transparent;
+  color: var(--gda-green);
+  border: 1.5px solid var(--gda-green);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.gda-badge-cancelado {
+  background: transparent;
+  color: var(--gda-red);
+  border: 1.5px solid var(--gda-red);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ---------- NOTIFICAÇÕES / MOVIMENTAÇÕES ---------- */
+.gda-notif-section {
+  background: var(--gda-white);
+  border: 1.5px solid var(--gda-border);
+  border-radius: 14px;
+  padding: 24px;
+  margin-top: 20px;
+}
+
+.gda-notif-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gda-green);
+  margin-bottom: 16px;
+}
+
+.gda-notif-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--gda-border);
+}
+
+.gda-notif-item:last-child { border-bottom: none; }
+
+.gda-notif-icon-wrap {
+  width: 40px;
+  height: 40px;
+  background: var(--gda-green-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.gda-notif-icon-wrap i {
+  color: var(--gda-green);
+  font-size: 16px;
+}
+
+.gda-notif-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.gda-notif-desc {
+  font-size: 13px;
+  color: var(--gda-muted);
+}
+
+.gda-notif-time {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gda-text);
+  margin-top: 2px;
+}
+
+.gda-ver-todas {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gda-green);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 16px;
+}
+
+.gda-ver-todas:hover {
+  text-decoration: underline;
+}
+
+/* ---------- GERENCIAR EMPRESAS ---------- */
+.gda-empresa-search {
+  border: 1.5px solid var(--gda-green);
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+  transition: box-shadow 0.2s;
+}
+
+.gda-empresa-search:focus {
+  box-shadow: 0 0 0 3px rgba(0,150,102,0.12);
+}
+
+.gda-empresa-card {
+  background: var(--gda-white);
+  border-left: 4px solid var(--gda-green);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  transition: box-shadow 0.2s;
+}
+
+.gda-empresa-card:hover {
+  box-shadow: 0 4px 16px rgba(0,150,102,0.12);
+}
+
+.gda-empresa-card.desativado {
+  border-left-color: var(--gda-red);
+}
+
+.gda-empresa-card .gda-empresa-nome {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 10px 0 4px 0;
+  color: var(--gda-text);
+}
+
+.gda-empresa-card.desativado .gda-empresa-nome {
+  color: var(--gda-red);
+}
+
+.gda-empresa-card .gda-empresa-proc {
+  font-size: 13px;
+  color: var(--gda-muted);
+  margin-bottom: 14px;
+}
+
+.gda-badge-ativado {
+  background: var(--gda-green);
+  color: #fff;
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.gda-badge-desativado {
+  background: var(--gda-red);
+  color: #fff;
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.gda-btn-editar {
+  border: 1.5px solid var(--gda-green);
+  background: transparent;
+  color: var(--gda-green);
+  border-radius: 8px;
+  padding: 7px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.gda-btn-editar:hover {
+  background: var(--gda-green);
+  color: #fff;
+}
+
+.gda-btn-editar.red {
+  border-color: var(--gda-red);
+  color: var(--gda-red);
+}
+
+.gda-btn-editar.red:hover {
+  background: var(--gda-red);
+  color: #fff;
+}
+
+.gda-btn-ver {
+  background: var(--gda-green);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.gda-btn-ver:hover {
+  background: var(--gda-green-dark);
+}
+
+.gda-btn-ver.red {
+  background: var(--gda-red);
+}
+
+.gda-btn-ver.red:hover {
+  background: #c0392b;
+}
+
+.gda-btn-add {
+  background: var(--gda-green);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.gda-btn-add:hover {
+  background: var(--gda-green-dark);
+}
+
+.gda-empresa-icon {
+  font-size: 32px;
+  color: var(--gda-green);
+}
+
+.gda-empresa-card.desativado .gda-empresa-icon {
+  color: var(--gda-red);
+}

@@ -51,8 +51,8 @@
     </div>
 
     <div class="text-center mt-4">
-      <a href="login.php" class="gda_back_link">
-        <i class="fa-solid fa-chevron-left me-1"></i> Voltar para o Login
+      <a href="index.php" class="gda_back_link">
+        <i class="fa-solid fa-chevron-left me-1"></i> Voltar para tela inicial
       </a>
     </div>
   </div>

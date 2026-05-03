@@ -44,5 +44,43 @@ async function carregarCotacoes() {
     document.getElementById('cotacao-cad').textContent = await getCotacao('CAD-BRL');
  }
     */
+function toggleSenha() {
+      const input = document.getElementById('senhaInput');
+      const icon = document.getElementById('olhoIcon');
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.replace('fa-eye', 'fa-eye-slash');
+      } else {
+        input.type = 'password';
+        icon.classList.replace('fa-eye-slash', 'fa-eye');
+      }
+    }
+
+  document.querySelectorAll('.gda_filter_btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.gda_filter_btn').forEach(b => b.classList.remove('gda_filter_active'));
+        this.classList.add('gda_filter_active');
+        const filter = this.dataset.filter;
+        document.querySelectorAll('.gda_faq_item').forEach(item => {
+          item.style.display = (filter === 'all' || item.dataset.category === filter) ? '' : 'none';
+        });
+      });
+    });
+    document.getElementById('faqSearch').addEventListener('input', function() {
+      const q = this.value.toLowerCase();
+      document.querySelectorAll('.gda_faq_item').forEach(item => {
+        item.style.display = item.innerText.toLowerCase().includes(q) ? '' : 'none';
+      });
+    });
+    document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(btn => {
+      const targetId = btn.getAttribute('data-bs-target');
+      const collapseEl = document.querySelector(targetId);
+      const chevron = btn.querySelector('.gda_faq_chevron');
+      if (collapseEl && chevron) {
+        collapseEl.addEventListener('show.bs.collapse', () => chevron.classList.add('gda_chevron_open'));
+        collapseEl.addEventListener('hide.bs.collapse', () => chevron.classList.remove('gda_chevron_open'));
+      }
+    });
+
 
 </script>

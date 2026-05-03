@@ -11,15 +11,15 @@
     <div class="col-lg-3 col-12 gda_footer_li">
         <h5 class="gda_footer_title">Suporte</h5>
         <ul class="list-unstyled">
-            <li><a href="#" class="gda_footer_li">Contatos</a></li>
-            <li><a href="#" class="gda_footer_li">Duvidas Frequentes</a></li>
+            <li><a href="contatos.php" class="gda_footer_li">Contatos</a></li>
+            <li><a href="duvidas_frequentes.php" class="gda_footer_li">Duvidas Frequentes</a></li>
     </div>
 
     <div class="col-lg-3 col-12 gda_footer_li">
         <h5 class="gda_footer_title">Institucional</h5>
         <ul class="list-unstyled">
-            <li><a href="#" class="gda_footer_li">Termos de Uso</a></li>
-            <li><a href="#" class="gda_footer_li">Politicas de privacidade</a></li>
+            <li><a href="termos_de_uso.php" class="gda_footer_li">Termos de Uso</a></li>
+            <li><a href="politica_de_privacidade.php" class="gda_footer_li">Politicas de privacidade</a></li>
     </div>
 
     <div class="col-lg-2 col-12 ">
@@ -32,13 +32,6 @@
             <a href="#" class="icon-footer"><img src="../assets/img/instagram.png" alt=""></a>
             <a href="#" class="icon-footer"><img src="../assets/img/linkedin.png" alt=""></a>
             <a href="#" class="icon-footer"><img src="../assets/img/facebook.png" alt=""></a>
-            
         </div>
     </div>
 </div>
-
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/main.js"></script>

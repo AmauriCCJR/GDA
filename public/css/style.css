@@ -1,408 +1,433 @@
-:root {
-	--corVariavel: (#fff);
-	--cor-btn: rgb(0, 128, 106);
+
+/* ========================================
+   NAVBAR ATIVA
+======================================== */
+.gda_nav_active {
+  color: #14AE5C !important;
+  font-weight: 700;
 }
 
-body {
-	background-color: white;
+/* ========================================
+   BREADCRUMB
+======================================== */
+.gda_breadcrumb_bar {
+  background-image: linear-gradient(to right, #009666, #007B6E, #007B6E);
+  padding: 12px 0;
 }
 
-.nav-item {
-	font-weight: 600;
+.gda_breadcrumb {
+  margin-bottom: 0;
 }
 
-.btn-outline-success {
-	background-color: white;
+.gda_breadcrumb .breadcrumb-item a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
 }
 
-.btn {
-	padding: 10px;
-	border-radius: 15px;
-	justify-content: center;
+.gda_breadcrumb .breadcrumb-item.active {
+  color: #ffffff;
+  font-weight: 600;
 }
 
-.gda_login {
-	color: #14AE5C;
-	font-weight: 600;
-	margin: 0 15px;
-	text-decoration: none;
+.gda_breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(255, 255, 255, 0.6);
 }
 
-.gda_descricao_home {
-	color: #1e1e1e !important;
-	font-size: 16px;
-	line-height: 30px;
-	margin-bottom: 20px;
+/* ========================================
+   FAQ - DÚVIDAS FREQUENTES
+======================================== */
+.gda_faq_search {
+  max-width: 460px;
 }
 
-.gda_cor_btn {
-	background-color: var(--cor-btn);
+.gda_search_input {
+  border: 1.5px solid #d0d0d0;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s;
 }
 
-.gda_bg {
-	padding: 5% 0;
-	background-image: linear-gradient(to right,
-			rgba(20, 174, 92, 0.2),
-			rgba(52, 167, 137, 0.2),
-			rgba(186, 197, 222, 0.2));
+.gda_search_input:focus {
+  border-color: var(--cor-btn);
+  box-shadow: 0 0 0 3px rgba(0, 128, 106, 0.12);
 }
 
-.gda_services {
-	background-color: #fff;
-	border-radius: 15px;
-	max-height: 319px;
-	max-width: 432px;
-	width: 100%;
-	height: 319px;
-	box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.3);
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: center;
-	font-weight: 600;
-
+.gda_filter_btn {
+  border: 1.5px solid #d0d0d0;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+  background-color: #fff;
+  transition: all 0.2s;
 }
 
-.gda_title_home {
-	color: #14AE5C !important;
-	font-size: 3rem;
-	font-weight: 700;
-	line-height: 1.2;
-	margin-bottom: 20px;
+.gda_filter_btn:hover {
+  border-color: var(--cor-btn);
+  color: var(--cor-btn);
 }
 
-.gda_subtitle_home {
-	color: #009966 !important;
-	font-size: 2.5rem;
-	font-weight: 700;
-	line-height: 1.2;
-	margin-bottom: 20px;
+.gda_filter_active {
+  background-color: var(--cor-btn) !important;
+  border-color: var(--cor-btn) !important;
+  color: #fff !important;
 }
 
-#gda_color_1 {
-	color: #FF990B;
-	width: 24px;
-	height: 24px;
+.gda_faq_item {
+  border: 1.5px solid #e8e8e8;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s;
 }
 
-#gda_color_2 {
-	color: #2563EB;
-	width: 24px;
-	height: 24px;
+.gda_faq_item:hover {
+  border-color: var(--cor-btn);
 }
 
-#gda_color_3 {
-	color: #E4E402;
-	width: 24px;
-	height: 24px;
+.gda_faq_btn {
+  width: 100%;
+  background: #fff;
+  border: none;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e1e1e;
+  cursor: pointer;
+  gap: 10px;
 }
 
-#gda_color_4 {
-	color: #FF0000;
-	width: 24px;
-	height: 24px;
+.gda_faq_btn:hover {
+  background-color: #f9fafb;
 }
 
-.gda_color_5 {
-	color: #14AE5C;
-	width: 24px;
-	height: 24px;
-}
-.iconzap {
-	color: #ffffff;
-	width: 24px;
-	height: 24px;
+.gda_faq_icon {
+  color: var(--cor-btn);
+  font-size: 18px;
+  flex-shrink: 0;
 }
 
-.gda_color_bg {
-	background-color: #fff;
+.gda_faq_tag {
+  display: inline-block;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #555;
+  margin-top: 4px;
 }
 
-.gda_servicos_completos {
-	margin-bottom: 100px;
+.gda_faq_chevron {
+  color: #888;
+  font-size: 14px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
 }
 
-.gda_services_card {
-	text-align: center;
-	border: 2px solid color-mix(in srgb, var(--corVariavel), transparent 80%);
-	border-radius: 15px;
-	padding: 30px;
-	max-width: 300px;
-	margin: 0 auto;
+.gda_chevron_open {
+  transform: rotate(180deg);
 }
 
-.gda_services_card:hover {
-	border: 2px solid var(--corVariavel);
-	box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.3);
-	transition: all 0.3s ease-in-out;
+.gda_faq_answer {
+  padding: 0 20px 16px 55px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
 }
 
-.gda_icon_home {
-	width: 50px;
-	height: 50px;
-	margin: 15px auto
+/* ========================================
+   LOGIN / SOLICITAR ACESSO
+======================================== */
+.gda_login_page {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.gda_services_card_title {
-	font-size: 1.5rem;
-	font-weight: 600;
-	color: #000;
+.gda_login_wrapper {
+  width: 100%;
+  max-width: 460px;
+  margin: 40px auto;
+  padding: 0 16px;
 }
 
-.cotacao {
-	background-color: #F9FAFB;
+.gda_login_logo {
+  height: 80px;
+  width: auto;
 }
 
-.cotacao-valores {
-	text-align: center;
+.gda_login_subtitle {
+  color: #888;
+  font-size: 14px;
+  margin-top: 6px;
 }
 
-.gda_cotacao_card {
-	border: 1px solid var(--cor-btn);
-	height: 100px;
-	border-radius: 15px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.3);
-
+.gda_login_card {
+  background: #fff;
+  border: 1.5px solid var(--cor-btn);
+  border-radius: 16px;
+  padding: 36px 40px;
 }
 
-.cotacao_title {
-	margin: 40px;
+.gda_registro_card {
+  padding: 32px 40px;
 }
 
-.cotacao_title_heading {
-	font-size: 29px;
-	font-weight: 600;
+.gda_login_title {
+  color: var(--cor-btn);
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 28px;
 }
 
-.cotacoes_espacing {
-	margin-bottom: 40px;
+.gda_form_label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
 }
 
-.gda_cotacao_title {
-	padding-top: 20px;
-	font-size: 15px;
-	font-weight: 600;
-	color: black;
+.gda_input_icon_wrap {
+  position: relative;
 }
 
-.gda_cotacao_space {
-	padding: 20px 0 50px 0;
+.gda_input_icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 15px;
+  pointer-events: none;
 }
 
-.gda_cotacao_valor {
-	color: var(--cor-btn);
-	font-size: 1.5rem;
-	font-weight: 500;
+.gda_login_input {
+  border: 1.5px solid #d0d0d0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 15px;
+  color: #333;
+  width: 100%;
+  transition: border-color 0.3s;
 }
 
-.gda_avaliacao {
-	border: 1px solid #14AE5C;
-	border-radius: 15px;
-	padding: 0 15px;
-	line-height: 20px;
+.gda_login_input:focus {
+  border-color: var(--cor-btn);
+  box-shadow: 0 0 0 3px rgba(0, 128, 106, 0.1);
+  outline: none;
 }
 
-.gda_avaliacao_title {
-	font-size: 20px;
-	padding: 15px;
-	font-weight: 650;
-	color: #204087;
+.gda_input_with_icon_right {
+  padding-left: 40px;
+  padding-right: 44px;
 }
 
-.gda_avaliacao_desc {
-	font-size: 16px;
-	font-weight: 400;
-	color: #000000;
-	padding-left: 15px;
+.gda_toggle_senha {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  padding: 0;
+  font-size: 15px;
 }
 
-.gda_avaliacao_business {
-	color: #14AE5C;
-	font-size: 16px;
-	font-weight: 600;
-	padding: 0 15px;
-
+.gda_check_label {
+  font-size: 14px;
+  color: #555;
 }
 
-.gda_avaliacao_autor {
-	color: #8C8C8C;
-	font-size: 14px;
+.gda_forgot_link {
+  color: var(--cor-btn);
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-.gda_status {
-	background-image: linear-gradient(to right,
-			#009666,
-			#007B6E,
-			#007B6E);
-	color: white;
-	padding: 50px 0;
+.gda_forgot_link:hover {
+  text-decoration: underline;
 }
 
-.gda_status_subtitle {
-	font-size: 48px;
-	font-weight: 700;
-
+.gda_btn_login {
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
 }
 
-.gda_status_text {
-	font-size: 16px;
-	font-weight: 600;
+.gda_login_divider {
+  border-color: #e8e8e8;
+  margin: 24px 0 16px 0;
 }
 
-.planos_title {
-	color: #000;
-	font-size: 32px;
-	font-weight: 600;
-	padding: 40px 0 10px 0;
+.gda_no_access_text {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 12px;
 }
 
-.gda_planos_card {
-	border: 1px solid #00000038;
-	border-radius: 15px;
-	padding: 30px;
+.gda_btn_solicitar {
+  border-color: var(--cor-btn);
+  color: var(--cor-btn);
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 12px;
 }
 
-.gda_planos_card:hover {
-	border: 1.5px solid var(--cor-btn);
-	box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.3);
-	transition: all 0.3s ease-in-out;
+.gda_btn_solicitar:hover {
+  background-color: var(--cor-btn);
+  color: #fff;
 }
 
-.gda_plano_ativo {
-	border: 1.5px solid var(--cor-btn);
-	border-radius: 15px;
-	padding: 30px;
+.gda_back_link {
+  color: #888;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.gda_planos_title {
-	font-size: 20px;
-	font-weight: 600;
-	color: #000000;
+.gda_back_link:hover {
+  color: var(--cor-btn);
 }
 
-.gda_planos_valores {
-	font-size: 24px;
-	font-weight: 600;
-	color: black;
-
+.gda_textarea {
+  resize: vertical;
+  min-height: 100px;
 }
 
-.gda_planos_mes {
-	font-size: 16px;
-	color: #51515188;
+/* ========================================
+   TERMOS DE USO / POLÍTICA DE PRIVACIDADE
+======================================== */
+.gda_legal_box {
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 40px 48px;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.8;
 }
 
-.gda_planos_features {
-	text-align: left;
-	padding-left: 30px;
-	align-items: center;
+.gda_legal_heading {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e1e1e;
+  margin-top: 32px;
+  margin-bottom: 12px;
 }
 
-.gda_planos_features_active {
-	text-align: left;
-	padding-left: 30px;
-	align-items: center;
-	border: 1px solid var(--cor-btn);
-	border-radius: 15px;
+.gda_legal_subheading {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 8px;
 }
 
-.gda_perguntas {
-	padding: 10px 50px;
+.gda_legal_alert {
+  background-color: rgba(20, 174, 92, 0.08);
+  border-left: 4px solid var(--cor-btn);
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 20px 0;
+  font-size: 14px;
+  color: #1e1e1e;
 }
 
-/* testes */
-.gda-input-field{
-	position: relative;
-	margin-top: 30px;
-	padding: 0 30px;
+.gda_legal_link {
+  color: var(--cor-btn);
+  text-decoration: none;
+  font-weight: 500;
 }
 
-/* Estilo básico do Input */
-.gda-input-field input {
-	width: 100%;
-	padding: 10px;
-	border: 2px solid #ccc;
-	border-radius: 15px;
-	outline: none;
-	font-size: 16px;
-	transition: border-color 0.3s;
+.gda_legal_link:hover {
+  text-decoration: underline;
 }
 
-/* Estilo básico do Label */
-.gda-input-field label {
-	position: absolute;
-	left: 10px;
-	top: -25px;
-	/* Começa acima do input */
-	background-color: white;
-	padding: 0 5px;
-	color: #515151;
-	font-size: 16px;
-	font-weight: 500;
-	transition: all 0.3s ease;
-	pointer-events: none;
-	/* Garante que o clique passe para o input */
+/* ========================================
+   CONTATOS
+======================================== */
+.gda_contact_card {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 16px;
+  padding: 36px 28px;
+  height: 100%;
+  transition: box-shadow 0.2s, border-color 0.2s;
 }
 
-/* Efeito ao clicar (Focus) ou quando houver texto (Valid) */
-.gda-input-field input:focus+label,
-.gda-input-field input:not(:placeholder-shown)+label {
-	top: -10px;
-	/* Desce até a borda */
-	font-size: 12px;
-	color: var(--cor-btn);
-	font-weight: bold;
+.gda_contact_card:hover {
+  border-color: var(--cor-btn);
+  box-shadow: 0 4px 16px rgba(0, 128, 106, 0.1);
 }
 
-/* Muda a cor da borda quando focado */
-.gda-input-field input:focus {
-	border-color: var(--cor-btn);
+.gda_contact_icon_wrap {
+  width: 56px;
+  height: 56px;
+  background-color: rgba(20, 174, 92, 0.12);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-footer{
-	margin-top: 50px;
-	background-color: #2D2D2D;
-	padding: 100px 0;
+.gda_contact_icon {
+  font-size: 22px;
+  color: var(--cor-btn);
 }
 
-footer ul li a{
-	text-align: left;
-	list-style: none;
-	text-decoration: none;
-	color: #ffffff80;
-}
-.gda_footer_title{
-	color: #fff;
-	text-align: left;
-	padding: 0 0 0 60px;
+.gda_contact_title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1e1e1e;
+  margin-bottom: 10px;
 }
 
-.gda_footer_title_rede{
-	color: #fff;
-	text-align: center;
-	padding: 0 0 15px 0px;
+.gda_contact_desc {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 14px;
+  line-height: 1.6;
 }
-.gda_footer_li{
-	text-align: left;
-	padding: 0 0 0 60px;
-	line-height: 30px;
+
+.gda_contact_link {
+  color: var(--cor-btn);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
 }
-.gda_footer_rede{
-	border: 1px solid var(--cor-btn);
-	padding: 20px;
-	margin: 5px;
-	border-radius: 15px;
-	
+
+.gda_contact_link:hover {
+  text-decoration: underline;
 }
-.gda_footer_logo{
-	height: 100px;
-	padding-right: 20px;
+
+/* ========================================
+   FOOTER AJUSTE
+======================================== */
+.gda_copyright_bar {
+  background-color: #2D2D2D;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 16px 0;
 }
-.icon-footer{
-	padding: 0 10px;
-	color: #fff;
+
+.gda_copyright_text {
+  color: var(--cor-btn);
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0;
 }

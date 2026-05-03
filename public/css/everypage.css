@@ -40,7 +40,7 @@
 }
 
 .gda_search_input {
-  border: 1.5px solid #d0d0d0;
+  border: 1.5px solid var(--cor-tema);
   border-radius: 12px;
   padding: 10px 16px;
   font-size: 15px;
@@ -65,18 +65,18 @@
 }
 
 .gda_filter_btn:hover {
-  border-color: var(--cor-btn);
-  color: var(--cor-btn);
+  border-color: var(--cor-tema);
+  color: var(--cor-tema);
 }
 
 .gda_filter_active {
-  background-color: var(--cor-btn) !important;
-  border-color: var(--cor-btn) !important;
+  background-color: var(--cor-tema) !important;
+  border-color: var(--cor-tema) !important;
   color: #fff !important;
 }
 
 .gda_faq_item {
-  border: 1.5px solid #e8e8e8;
+  border: 2px solid var(--cor-tema);
   border-radius: 12px;
   margin-bottom: 12px;
   overflow: hidden;
@@ -115,7 +115,7 @@
 
 .gda_faq_tag {
   display: inline-block;
-  background-color: #f0f0f0;
+  background-color: #83D589;
   border-radius: 20px;
   padding: 2px 10px;
   font-size: 12px;

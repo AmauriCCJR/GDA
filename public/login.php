@@ -19,8 +19,8 @@
       <div class="mb-3">
         <label class="form-label gda_form_label">E-mail</label>
         <div class="gda_input_icon_wrap">
-          <i class="fa-regular fa-envelope gda_input_icon"></i>
-          <input type="email" class="form-control gda_login_input" placeholder="seu@email.com">
+          <i class="fa-solid fa-envelope gda_input_icon"></i>
+          <input type="email" class="form-control gda_login_input gda_input_with_icon_right" placeholder="seu@email.com">
         </div>
       </div>
 
@@ -28,7 +28,7 @@
         <label class="form-label gda_form_label">Senha</label>
         <div class="gda_input_icon_wrap">
           <i class="fa-solid fa-lock gda_input_icon"></i>
-          <input type="password" class="form-control gda_login_input gda_input_with_icon_right" id="senhaInput" placeholder="Digite sua senha aqui">
+          <input type="password" class="form-control gda_login_input gda_input_with_icon_right" id="senhaInput" placeholder="digite sua senha aqui">
           <button type="button" class="gda_toggle_senha" onclick="toggleSenha()">
             <i class="fa-regular fa-eye" id="olhoIcon"></i>
           </button>

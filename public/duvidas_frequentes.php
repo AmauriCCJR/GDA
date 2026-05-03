@@ -23,9 +23,9 @@
         </ul>
         <div class="d-flex align-items-center">
           <div class="nav-item me-3 gda_login">
-            <a class="nav-link" href="mf/login.php">Entrar</a>
+            <a class="nav-link" href="login.php">Entrar</a>
           </div>
-          <a class="btn btn-success gda_cor_btn" href="mf/registro.php">Solicitar Demonstração</a>
+          <a class="btn btn-success gda_cor_btn" href="solicitar_acesso.php">Solicitar Demonstração</a>
         </div>
       </div>
     </div>

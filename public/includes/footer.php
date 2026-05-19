@@ -2,10 +2,10 @@
     <div class="col-lg-3 col-12 gda_footer_li">
         <h5 class="gda_footer_title">Plataforma</h5>
         <ul class="list-unstyled ">
-            <li><a href="#" class="gda_footer_li">Otimize sua Importação</a></li>
-            <li><a href="#" class="gda_footer_li">Simplifique sua Exportação</a></li>
-            <li><a href="#" class="gda_footer_li">Gestão Inteligente de Armazéns</a></li>
-            <li><a href="#" class="gda_footer_li">Consultoria Aduaneira Especializada</a></li>
+            <li class="gda_footer_li">Otimize sua Importação</li>
+            <li class="gda_footer_li">Simplifique sua Exportação</li>
+            <li class="gda_footer_li">Gestão Inteligente de Armazéns</a></li>
+            <li class="gda_footer_li">Consultoria Aduaneira Especializada</a></li>
     </div>
 
     <div class="col-lg-3 col-12 gda_footer_li">

@@ -50,27 +50,40 @@
 
 
     <div class="row gda_servicos_completos g-4 justify-content-center">
-      <section class="col-lg-3 col-md-6 col-12 gda_services_card" style="--corVariavel: #2563EB">
-        <img src="../assets/img/Importar.png" class="gda_icon_home" alt="...">
-        <h5 class="gda_services_card_title">Importação</h5>
-        <p class="card-text">Gestão completa de processos de importação com controle de documentos e prazos</p>
-      </section>
-      <section class="col-lg-3 col-md-6 col-12 gda_services_card" style="--corVariavel: #00806a">
-        <img src="../assets/img/Exportar.png" class="gda_icon_home" alt="...">
-        <h5 class="gda_services_card_title">Exportação</h5>
-        <p class="card-text">Acompanhamento de exportações com validação de documentos</p>
-      </section>
-      <section class="col-lg-3 col-md-6 col-12 gda_services_card" style="--corVariavel: #FFCD29">
-        <img src="../assets/img/Banco.png" class="gda_icon_home" alt="...">
-        <h5 class="gda_services_card_title">Armazenamento</h5>
-        <p class="card-text">Controle digital de armazenagem e movimentação de cargas</p>
-      </section>
-      <section class="col-lg-3 col-md-6 col-12 gda_services_card" style="--corVariavel: #FF0000">
-        <img src="../assets/img/Pessoa.png" class="gda_icon_home" alt="...">
-        <h5 class="gda_services_card_title">Consultoria</h5>
-        <p class="card-text">Suporte especializado para otimizar suas operações aduaneiras</p>
-      </section>
-    </div>
+  
+  <div class="col-12 col-lg-3 col-md-6 d-flex justify-content-center">
+    <section class="gda_services_card " style="--corVariavel: #2563EB">
+      <img src="../assets/img/Importar.png" class="gda_icon_home" alt="...">
+      <h5 class="gda_services_card_title">Importação</h5>
+      <p class="card-text">Gestão completa de processos de importação com controle de documentos e prazos</p>
+    </section>
+  </div>
+
+  <div class="col-12 col-lg-3 col-md-6 d-flex justify-content-center">
+    <section class="gda_services_card " style="--corVariavel: #00806a">
+      <img src="../assets/img/Exportar.png" class="gda_icon_home" alt="...">
+      <h5 class="gda_services_card_title">Exportação</h5>
+      <p class="card-text">Acompanhamento de exportações com validação de documentos</p>
+    </section>
+  </div>
+
+  <div class="col-12 col-lg-3 col-md-6 d-flex justify-content-center">
+    <section class="gda_services_card " style="--corVariavel: #FFCD29">
+      <img src="../assets/img/Banco.png" class="gda_icon_home" alt="...">
+      <h5 class="gda_services_card_title">Armazenamento</h5>
+      <p class="card-text">Controle digital de armazenagem e movimentação de cargas</p>
+    </section>
+  </div>
+
+  <div class="col-12 col-lg-3 col-md-6 d-flex justify-content-center">
+    <section class="gda_services_card " style="--corVariavel: #FF0000">
+      <img src="../assets/img/Pessoa.png" class="gda_icon_home" alt="...">
+      <h5 class="gda_services_card_title">Consultoria</h5>
+      <p class="card-text">Suporte especializado para otimizar suas operações aduaneiras</p>
+    </section>
+  </div>
+  
+</div>
   </div>
 
   <div class="container-fluid cotacao py-5">
@@ -135,27 +148,27 @@
           <h5 class="gda_avaliacao_title">60% mais rapido</h5>
           <p class="gda_avaliacao_desc">"Reduzimos em 60% o tempo de processamento de documentos. A plataforma é intuitiva e resolve nossos principais problemas."</p>
           <p class="gda_avaliacao_business">Importadora Alfa</p>
-          <p class="gda_avaliacao_autor px-2">Fernanda Santos</p>
+          <p class="gda_avaliacao_autor px-3">Fernanda Santos</p>
         </div>
 
         <div class="col-lg-5 col-12 gda_avaliacao">
           <h5 class="gda_avaliacao_title">80% menos ligações</h5>
           <p class="gda_avaliacao_desc">"A comunicação com clientes melhorou drasticamente. Eles mesmos acompanham tudo, reduzindo ligações em 80%."</p>
           <p class="gda_avaliacao_business">Express Logistics</p>
-          <p class="gda_avaliacao_autor px-2">Carlos Mendes</p>
+          <p class="gda_avaliacao_autor px-3">Carlos Mendes</p>
         </div>
         <div class="col-lg-5 col-12 gda_avaliacao">
           <h5 class="gda_avaliacao_title">500+ processos</h5>
           <p class="gda_avaliacao_desc">"Conseguimos gerenciar mais de 500 processos simultâneos com total controle e visibilidade. Indispensável!"</p>
           <p class="gda_avaliacao_business">Importadora Beta</p>
-          <p class="gda_avaliacao_autor px-2">João Pedro</p>
+          <p class="gda_avaliacao_autor px-3">João Pedro</p>
         </div>
 
         <div class="col-lg-5 col-12 gda_avaliacao">
           <h5 class="gda_avaliacao_title">95% menos erros</h5>
           <p class="gda_avaliacao_desc">"Antes enfrentávamos muitos erros manuais no preenchimento dos documentos. Reduzimos as inconsistências. Hoje tudo flui com muito mais segurança."</p>
           <p class="gda_avaliacao_business">Global Trade Solutions</p>
-          <p class="gda_avaliacao_autor px-2">Marcos Almeida</p>
+          <p class="gda_avaliacao_autor px-3">Marcos Almeida</p>
         </div>
 
       </div>
@@ -305,8 +318,8 @@
       </div>
     </div>
   </div>
-  </div>
-  <footer class="container-fluid text-center">
+  
+  <footer class="container-fluid">
     <?php include 'includes/footer.php'; ?>
   </footer>
 

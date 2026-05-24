@@ -43,7 +43,7 @@
         <a href="recuperar_senha.php" class="gda_forgot_link">Esqueci minha senha</a>
       </div>
 
-      <a class="btn btn-success w-100 gda_btn_login gda_cor_btn" href="loading.php">Entrar</a>
+      <a class="btn btn-success w-100 gda_btn_login gda_cor_btn" href="loading_login.php">Entrar</a>
 
       <hr class="gda_login_divider">
 

@@ -17,7 +17,7 @@
         <div class="gda-topbar-user-name">Administrador</div>
         <div class="gda-topbar-user-email">admin@gda.com.br</div>
       </div>
-      <a href="index.php">
+      <a href="loading_signout.php">
       <div class="gda-avatar">A</div>
       </a>
     </div>

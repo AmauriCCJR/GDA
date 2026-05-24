@@ -392,6 +392,7 @@
   </footer>
 
   <script>
+    // Filtro por categoria
     document.querySelectorAll('.gda_filter_btn').forEach(btn => {
       btn.addEventListener('click', function() {
         document.querySelectorAll('.gda_filter_btn').forEach(b => b.classList.remove('gda_filter_active'));
@@ -402,19 +403,37 @@
         });
       });
     });
+
+    // Busca por texto
     document.getElementById('faqSearch').addEventListener('input', function() {
       const q = this.value.toLowerCase();
       document.querySelectorAll('.gda_faq_item').forEach(item => {
         item.style.display = item.innerText.toLowerCase().includes(q) ? '' : 'none';
       });
     });
+
+    // Accordion: fecha os outros itens ao abrir um, e rotaciona o chevron
     document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(btn => {
       const targetId = btn.getAttribute('data-bs-target');
       const collapseEl = document.querySelector(targetId);
       const chevron = btn.querySelector('.gda_faq_chevron');
+
       if (collapseEl && chevron) {
-        collapseEl.addEventListener('show.bs.collapse', () => chevron.classList.add('gda_chevron_open'));
-        collapseEl.addEventListener('hide.bs.collapse', () => chevron.classList.remove('gda_chevron_open'));
+        collapseEl.addEventListener('show.bs.collapse', () => {
+          chevron.classList.add('gda_chevron_open');
+
+          // Fecha todos os outros collapses abertos
+          document.querySelectorAll('.collapse.show').forEach(openEl => {
+            if ('#' + openEl.id !== targetId) {
+              const instance = bootstrap.Collapse.getInstance(openEl);
+              if (instance) instance.hide();
+            }
+          });
+        });
+
+        collapseEl.addEventListener('hide.bs.collapse', () => {
+          chevron.classList.remove('gda_chevron_open');
+        });
       }
     });
   </script>

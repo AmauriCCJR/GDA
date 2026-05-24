@@ -49,7 +49,7 @@
     </div>
 
 
-    <div class="row gda_servicos_completos gap-4">
+    <div class="row gda_servicos_completos g-4 justify-content-center">
       <section class="col-lg-3 col-md-6 col-12 gda_services_card" style="--corVariavel: #2563EB">
         <img src="../assets/img/Importar.png" class="gda_icon_home" alt="...">
         <h5 class="gda_services_card_title">Importação</h5>

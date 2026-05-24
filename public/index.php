@@ -135,27 +135,27 @@
           <h5 class="gda_avaliacao_title">60% mais rapido</h5>
           <p class="gda_avaliacao_desc">"Reduzimos em 60% o tempo de processamento de documentos. A plataforma é intuitiva e resolve nossos principais problemas."</p>
           <p class="gda_avaliacao_business">Importadora Alfa</p>
-          <p class="gda_avaliacao_autor">Fernanda Santos</p>
+          <p class="gda_avaliacao_autor px-2">Fernanda Santos</p>
         </div>
 
         <div class="col-lg-5 col-12 gda_avaliacao">
           <h5 class="gda_avaliacao_title">80% menos ligações</h5>
           <p class="gda_avaliacao_desc">"A comunicação com clientes melhorou drasticamente. Eles mesmos acompanham tudo, reduzindo ligações em 80%."</p>
           <p class="gda_avaliacao_business">Express Logistics</p>
-          <p class="gda_avaliacao_autor">Carlos Mendes</p>
+          <p class="gda_avaliacao_autor px-2">Carlos Mendes</p>
         </div>
         <div class="col-lg-5 col-12 gda_avaliacao">
           <h5 class="gda_avaliacao_title">500+ processos</h5>
           <p class="gda_avaliacao_desc">"Conseguimos gerenciar mais de 500 processos simultâneos com total controle e visibilidade. Indispensável!"</p>
           <p class="gda_avaliacao_business">Importadora Beta</p>
-          <p class="gda_avaliacao_autor">João Pedro</p>
+          <p class="gda_avaliacao_autor px-2">João Pedro</p>
         </div>
 
         <div class="col-lg-5 col-12 gda_avaliacao">
           <h5 class="gda_avaliacao_title">95% menos erros</h5>
           <p class="gda_avaliacao_desc">"Antes enfrentávamos muitos erros manuais no preenchimento dos documentos. Reduzimos as inconsistências. Hoje tudo flui com muito mais segurança."</p>
           <p class="gda_avaliacao_business">Global Trade Solutions</p>
-          <p class="gda_avaliacao_autor">Marcos Almeida</p>
+          <p class="gda_avaliacao_autor px-2">Marcos Almeida</p>
         </div>
 
       </div>

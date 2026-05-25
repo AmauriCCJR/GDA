@@ -1,35 +1,78 @@
+
+
+
 function enviarWhatsApp() {
+var erro = [];
+const campo_nome = document.getElementById('nome').value;
+const campo_email = document.getElementById('email').value;
+const campo_empresa = document.getElementById('empresa').value;
+const campo_documento = document.getElementById('documento').value;
+const campo_telefone = document.getElementById('telefone').value;
+const campo_mensagem = document.getElementById('mensagem').value;
+const error_nome = document.getElementById('error_nome');
+const error_email = document.getElementById('error_email');
+const error_empresa = document.getElementById('error_empresa');
+const error_telefone = document.getElementById('error_telefone');
+const error_mensagem = document.getElementById('error_mensagem');
+
+esconderErro(error_nome);
+esconderErro(error_email);
+esconderErro(error_empresa);
+esconderErro(error_telefone);
+esconderErro(error_mensagem);
+
+
         // COLOQUE SEU NÚMERO AQUI (Apenas números, com DDD e código do país)
         const meuNumero = "5511975862805"; 
 
-        // Captura os valores
-        const nome = document.getElementById('nome').value;
-        const email = document.getElementById('email').value;
-        const empresa = document.getElementById('empresa').value;
-        const documento = document.getElementById('documento').value;
-        const telefone = document.getElementById('telefone').value;
-        const mensagem = document.getElementById('mensagem').value;
-
-        // Validação simples
-        if(!nome || !telefone || !email) {
-            alert("Por favor, preencha todos os campos obrigatórios.");
-            return;
+        if (campo_nome === "") {
+          erro += mostrarErro(error_nome, 'Por favor, digite seu nome');
         }
-
-        // Monta o texto da mensagem (codificado para URL)
-        const texto = `*Novo Contato via GDA*%0A%0A` +
-                      `*Nome:* ${nome}%0A` +
-                      `*E-mail:* ${email}%0A` +
-                      `*Empresa:* ${empresa}%0A` +
-                      `*CPF/CNPJ:* ${documento}%0A` +
-                      `*Telefone:* ${telefone}%0A` +
-                      `*Mensagem:* ${mensagem}`;
+         if (campo_email === "") {
+          
+          erro += mostrarErro(error_email, 'Por favor, digite seu e-mail');
+        }
+         if (campo_empresa === "") {
+          
+          erro += mostrarErro(error_empresa, 'Por favor, digite o nome da empresa');
+        }
+         if (campo_telefone === "") {
+          
+          erro += mostrarErro(error_telefone, 'Por favor, digite um telefone para contato');
+        }
+         if (campo_mensagem === "") {
+          
+          erro += mostrarErro(error_mensagem, 'Por favor, digite uma mensagem');
+        }
+        if (erro == ""){
+                      const texto = `*Novo Contato via GDA*%0A%0A` +
+                      `*Nome:* ${campo_nome}%0A` +
+                      `*E-mail:* ${campo_email}%0A` +
+                      `*Empresa:* ${campo_empresa}%0A` +
+                      `*CPF/CNPJ:* ${campo_documento}%0A` +
+                      `*Telefone:* ${campo_telefone}%0A` +
+                      `*Mensagem:* ${campo_mensagem}`;
 
         // Monta o link da API
         const url = `https://api.whatsapp.com/send?phone=${meuNumero}&text=${texto}`;
 
         // Abre em uma nova aba
         window.open(url, '_blank');
+
+
+      }
+    }
+
+    function mostrarErro(nome_campo, mensagem){
+      nome_campo.classList.remove('esconder');
+      nome_campo.classList.add('mostrar');
+      nome_campo.classList.add('gda_erro');
+      nome_campo.innerText = mensagem;
+    }
+
+    function esconderErro(nome_campo){
+      nome_campo.classList.remove('mostrar');
+      nome_campo.classList.add('esconder');
     }
 
  /*
@@ -107,4 +150,6 @@ function toggleSenha() {
         collapseEl.addEventListener('hide.bs.collapse', () => chevron.classList.remove('gda_chevron_open'));
       }
     });
+
+
 

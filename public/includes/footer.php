@@ -28,7 +28,7 @@
     </div>
 
     <div class="col-lg-3 col-md-6 col-12 d-flex flex-column align-items-lg-end align-items-center">
-      <a href="index.php" class="mb-4">
+      <a href="index.php" class="mb-0">
         <img src="../assets/img/logo_footer2.png" alt="GDA" class="gda_footer_logo">
       </a>
       

@@ -24,10 +24,10 @@
             Simplifique sua operação e acompanhe processos em tempo real.
           </p>
           <div class="d-flex gap-2 flex-wrap">
-            <a class="btn btn-success gda_cor_btn d-inline-flex align-items-center gap-2" id="comeceagr">
+            <a class="btn btn-success gda_cor_btn d-inline-flex align-items-center gap-2" id="comeceagr" href="#planos">
               Comece Agora <i class="fa-solid fa-arrow-right"></i>
             </a>
-            <a class="btn btn-outline-success">Saiba Mais</a>
+            <a class="btn btn-outline-success" href="solicitar_acesso.php">Saiba Mais</a>
           </div>
         </div>
         <div class="col-lg-5 col-12 d-flex flex-column align-items-start justify-content-center gda_services gap-3 mt-4 mt-lg-0 mx-auto">
@@ -279,20 +279,24 @@
 
       <div class="container col-lg-6 col-10 mx-auto gda_plano_ativo p-4">
         <form id="whatsappForm">
-
+          
           <div class="gda-input-field">
-            <input type="text" id="nome" placeholder=" " required>
+            
+            <input type="text" id="nome" placeholder=" " >
             <label for="nome">Nome Completo*</label>
+            <p class="gda_error_form esconder" id="error_nome">pppp</p>
           </div>
 
           <div class="gda-input-field">
-            <input type="email" id="email" placeholder=" " required>
+            <input type="email" id="email" placeholder=" " >
             <label for="email">E-mail*</label>
+             <p class="gda_error_form esconder" id="error_email">pppp</p>
           </div>
 
           <div class="gda-input-field">
-            <input type="text" id="empresa" placeholder=" " required>
+            <input type="text" id="empresa" placeholder=" " >
             <label for="empresa">Empresa*</label>
+             <p class="gda_error_form esconder" id="error_empresa">pppp</p>
           </div>
 
           <div class="gda-input-field">
@@ -301,16 +305,18 @@
           </div>
 
           <div class="gda-input-field">
-            <input type="tel" id="telefone" placeholder=" " required>
+            <input type="tel" id="telefone" placeholder=" ">
             <label for="telefone">Telefone*</label>
+             <p class="gda_error_form esconder" id="error_telefone">pppp</p>
           </div>
 
           <div class="gda-input-field">
-            <input id="mensagem" placeholder=" " required></input>
+            <input id="mensagem" placeholder=" "></input>
             <label for="mensagem">Mensagem*</label>
+             <p class="gda_error_form esconder" id="error_mensagem">pppp</p>
           </div>
 
-          <button type="button" class="btn btn-success w-100 mt-3" onclick="enviarWhatsApp()">
+          <button type="button" class="btn btn-success w-100 mt-3 btn_enviar_zap" onclick="enviarWhatsApp()">
             <i class="fa-brands fa-whatsapp iconzap"></i>
             Enviar via WhatsApp
           </button>

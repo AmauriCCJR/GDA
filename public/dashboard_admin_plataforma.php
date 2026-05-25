@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <?php include 'includes/head.php'; ?>
-  <link rel="stylesheet" href="css/dashboard.css">
+  
 </head>
 <body class="gda-dash-body">
 

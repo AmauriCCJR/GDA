@@ -3,7 +3,12 @@
 	--cor-btn: rgb(0, 128, 106);
 	--cor-tema: #14AE5C;
 }
-
+.mostrar{
+	display: block;
+}
+.esconder{
+	display: none;
+}
 body {
 	background-color: white;
 }
@@ -52,7 +57,7 @@ body {
 .gda_services {
 	background-color: #fff;
 	border-radius: 15px;
-	max-height: none;
+	height: 300px;
 	max-width: 100%;
 	
 	box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.3);
@@ -117,6 +122,9 @@ body {
 	color: #ffffff;
 	width: 24px;
 	height: 24px;
+}
+.btn_enviar_zap{
+	background-color: var(--cor-tema);
 }
 
 .gda_color_bg {
@@ -402,7 +410,7 @@ footer ul li a {
 	padding: 0 0 0 0px;
 }
 .gda_footer_rede{
-	border: 1px solid var(--cor-btn);
+	border: 1px solid var(--cor-tema);
 	padding: 20px;
 	margin: 5px;
 	border-radius: 15px;
@@ -410,10 +418,15 @@ footer ul li a {
 }
 .gda_footer_logo{
 	height: 100px;
-	padding-right: 20px;
+	margin-right: 5%;
 }
 .icon-footer{
 	padding: 0 10px;
 	color: #fff;
 }
-
+.gda_erro{
+	color: rgb(255, 95, 95);
+	font-size: 16px;
+	font-weight: 600;
+	
+}

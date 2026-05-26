@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="css/everypage.css">
 <link rel="stylesheet" href="css/main.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-<script src = "js/main2.js"></script>
+<script src = "js/script.js"></script>
 <?php 
     
     $caminho = 'app/helpers/helper.php';

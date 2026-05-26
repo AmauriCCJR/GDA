@@ -346,7 +346,7 @@ body {
 /* Estilo básico do Label */
 .gda-input-field label {
 	position: absolute;
-	left: 10px;
+	left: 50px;
 	top: -25px;
 	/* Começa acima do input */
 	background-color: white;
@@ -424,9 +424,30 @@ footer ul li a {
 	padding: 0 10px;
 	color: #fff;
 }
-.gda_erro{
-	color: rgb(255, 95, 95);
+
+.erros_form{
+	align-content: center;
+	text-align: left;
+	color: #FF0000;
 	font-size: 16px;
-	font-weight: 600;
-	
+	font-weight: 400;
+	background-color: rgb(255, 170, 170);
+	border: 1px solid #FF0000;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px 0;
+}
+.erros_form p{
+	width: fit-content;
+	text-align: left;
+}
+.erro_header{
+	font-size: 20px;
+	font-weight: 500px;
+
+}
+.erros_text{
+	font-size: 14px;
 }

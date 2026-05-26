@@ -7,8 +7,8 @@
 
 <body>
 
-  <?php 
-    include 'includes/header.php';
+  <?php
+  include 'includes/header.php';
   ?>
 
   <div class="container-fluid gda_bg">
@@ -50,40 +50,40 @@
 
 
     <div class="row gda_servicos_completos g-4 justify-content-center">
-  
-  <div class="col-12 col-lg-3 col-md-6 d-flex justify-content-center">
-    <section class="gda_services_card " style="--corVariavel: #2563EB">
-      <img src="../assets/img/Importar.png" class="gda_icon_home" alt="...">
-      <h5 class="gda_services_card_title">Importação</h5>
-      <p class="card-text">Gestão completa de processos de importação com controle de documentos e prazos</p>
-    </section>
-  </div>
 
-  <div class="col-12 col-lg-3 col-md-6 d-flex justify-content-center">
-    <section class="gda_services_card " style="--corVariavel: #00806a">
-      <img src="../assets/img/Exportar.png" class="gda_icon_home" alt="...">
-      <h5 class="gda_services_card_title">Exportação</h5>
-      <p class="card-text">Acompanhamento de exportações com validação de documentos</p>
-    </section>
-  </div>
+      <div class="col-12 col-lg-3 col-md-6 d-flex justify-content-center">
+        <section class="gda_services_card " style="--corVariavel: #2563EB">
+          <img src="../assets/img/Importar.png" class="gda_icon_home" alt="...">
+          <h5 class="gda_services_card_title">Importação</h5>
+          <p class="card-text">Gestão completa de processos de importação com controle de documentos e prazos</p>
+        </section>
+      </div>
 
-  <div class="col-12 col-lg-3 col-md-6 d-flex justify-content-center">
-    <section class="gda_services_card " style="--corVariavel: #FFCD29">
-      <img src="../assets/img/Banco.png" class="gda_icon_home" alt="...">
-      <h5 class="gda_services_card_title">Armazenamento</h5>
-      <p class="card-text">Controle digital de armazenagem e movimentação de cargas</p>
-    </section>
-  </div>
+      <div class="col-12 col-lg-3 col-md-6 d-flex justify-content-center">
+        <section class="gda_services_card " style="--corVariavel: #00806a">
+          <img src="../assets/img/Exportar.png" class="gda_icon_home" alt="...">
+          <h5 class="gda_services_card_title">Exportação</h5>
+          <p class="card-text">Acompanhamento de exportações com validação de documentos</p>
+        </section>
+      </div>
 
-  <div class="col-12 col-lg-3 col-md-6 d-flex justify-content-center">
-    <section class="gda_services_card " style="--corVariavel: #FF0000">
-      <img src="../assets/img/Pessoa.png" class="gda_icon_home" alt="...">
-      <h5 class="gda_services_card_title">Consultoria</h5>
-      <p class="card-text">Suporte especializado para otimizar suas operações aduaneiras</p>
-    </section>
-  </div>
-  
-</div>
+      <div class="col-12 col-lg-3 col-md-6 d-flex justify-content-center">
+        <section class="gda_services_card " style="--corVariavel: #FFCD29">
+          <img src="../assets/img/Banco.png" class="gda_icon_home" alt="...">
+          <h5 class="gda_services_card_title">Armazenamento</h5>
+          <p class="card-text">Controle digital de armazenagem e movimentação de cargas</p>
+        </section>
+      </div>
+
+      <div class="col-12 col-lg-3 col-md-6 d-flex justify-content-center">
+        <section class="gda_services_card " style="--corVariavel: #FF0000">
+          <img src="../assets/img/Pessoa.png" class="gda_icon_home" alt="...">
+          <h5 class="gda_services_card_title">Consultoria</h5>
+          <p class="card-text">Suporte especializado para otimizar suas operações aduaneiras</p>
+        </section>
+      </div>
+
+    </div>
   </div>
 
   <div class="container-fluid cotacao py-5">
@@ -99,14 +99,22 @@
         <div class="col-lg-2 col-12">
           <div class="gda_cotacao_card">
             <h5 class="gda_cotacao_title">Dólar - USD</h5>
-            <p class='gda_cotacao_valor'>R$ <span id="cotacao-usd"><script>carregarCotacoes()</script></span></p>
+            <p class='gda_cotacao_valor'>R$ <span id="cotacao-usd">
+                <script>
+                  carregarCotacoes()
+                </script>
+              </span></p>
           </div>
         </div>
 
         <div class="col-lg-2 col-12">
           <div class="gda_cotacao_card">
             <h5 class="gda_cotacao_title">Euro - EUR</h5>
-            <p class='gda_cotacao_valor'>R$ <span id="cotacao-eur"><script>carregarCotacoes()</script></span></p>
+            <p class='gda_cotacao_valor'>R$ <span id="cotacao-eur">
+                <script>
+                  carregarCotacoes()
+                </script>
+              </span></p>
           </div>
         </div>
 
@@ -114,7 +122,11 @@
         <div class="col-lg-2 col-12">
           <div class="gda_cotacao_card">
             <h5 class="gda_cotacao_title">Guaranies - PYG</h5>
-            <p class='gda_cotacao_valor'>R$ <span id="cotacao-pyg"><script>carregarCotacoes()</script></span></p>
+            <p class='gda_cotacao_valor'>R$ <span id="cotacao-pyg">
+                <script>
+                  carregarCotacoes()
+                </script>
+              </span></p>
             </p>
           </div>
         </div>
@@ -122,7 +134,11 @@
         <div class="col-lg-2 col-12">
           <div class="gda_cotacao_card">
             <h5 class="gda_cotacao_title">Libras Esterfinas - GBP</h5>
-            <p class='gda_cotacao_valor'>R$ <span id="cotacao-gbp"><script>carregarCotacoes()</script></span></p>
+            <p class='gda_cotacao_valor'>R$ <span id="cotacao-gbp">
+                <script>
+                  carregarCotacoes()
+                </script>
+              </span></p>
             </p>
           </div>
         </div>
@@ -130,7 +146,11 @@
         <div class="col-lg-2 col-12">
           <div class="gda_cotacao_card">
             <h5 class="gda_cotacao_title">Dolar Canadense</h5>
-            <p class='gda_cotacao_valor'>R$ <span id="cotacao-cad"><script>carregarCotacoes()</script></span></p>
+            <p class='gda_cotacao_valor'>R$ <span id="cotacao-cad">
+                <script>
+                  carregarCotacoes()
+                </script>
+              </span></p>
           </div>
         </div>
       </div>
@@ -279,24 +299,24 @@
 
       <div class="container col-lg-6 col-10 mx-auto gda_plano_ativo p-4">
         <form id="whatsappForm">
-          
+          <div class="esconder" id="erros_form">
+            <p class="esconder erro_header" id="erro_header"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Campos Incorretos ou vazios</p>
+            <p class="esconder" id="erros_text">erros</p>
+          </div>
           <div class="gda-input-field">
-            
-            <input type="text" id="nome" placeholder=" " >
+
+            <input type="text" id="nome" placeholder=" ">
             <label for="nome">Nome Completo*</label>
-            <p class="gda_error_form esconder" id="error_nome">pppp</p>
           </div>
 
           <div class="gda-input-field">
-            <input type="email" id="email" placeholder=" " >
+            <input type="email" id="email" placeholder=" ">
             <label for="email">E-mail*</label>
-             <p class="gda_error_form esconder" id="error_email">pppp</p>
           </div>
 
           <div class="gda-input-field">
-            <input type="text" id="empresa" placeholder=" " >
+            <input type="text" id="empresa" placeholder=" ">
             <label for="empresa">Empresa*</label>
-             <p class="gda_error_form esconder" id="error_empresa">pppp</p>
           </div>
 
           <div class="gda-input-field">
@@ -305,15 +325,15 @@
           </div>
 
           <div class="gda-input-field">
+            
             <input type="tel" id="telefone" placeholder=" ">
             <label for="telefone">Telefone*</label>
-             <p class="gda_error_form esconder" id="error_telefone">pppp</p>
           </div>
 
           <div class="gda-input-field">
             <input id="mensagem" placeholder=" "></input>
             <label for="mensagem">Mensagem*</label>
-             <p class="gda_error_form esconder" id="error_mensagem">pppp</p>
+
           </div>
 
           <button type="button" class="btn btn-success w-100 mt-3 btn_enviar_zap" onclick="enviarWhatsApp()">
@@ -324,7 +344,7 @@
       </div>
     </div>
   </div>
-  
+
   <footer class="container-fluid">
     <?php include 'includes/footer.php'; ?>
   </footer>

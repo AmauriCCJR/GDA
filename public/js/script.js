@@ -1,55 +1,63 @@
 
 function enviarWhatsApp() {
-  var erro = [];
-  const campo_nome = document.getElementById('nome').value;
-  const campo_email = document.getElementById('email').value;
-  const campo_empresa = document.getElementById('empresa').value;
-  const campo_documento = document.getElementById('documento').value;
-  const campo_telefone = document.getElementById('telefone').value;
-  const campo_mensagem = document.getElementById('mensagem').value;
-  const error_nome = document.getElementById('error_nome');
-  const error_email = document.getElementById('error_email');
-  const error_empresa = document.getElementById('error_empresa');
-  const error_telefone = document.getElementById('error_telefone');
-  const error_mensagem = document.getElementById('error_mensagem');
+  var erro = "";
+  const erros_form = document.getElementById('erros_form');
+  const erro_header = document.getElementById('erro_header');
+  const erros_text = document.getElementById('erros_text');
+  const campo_nome = document.getElementById('nome');
+  const campo_email = document.getElementById('email');
+  const campo_empresa = document.getElementById('empresa');
+  const campo_documento = document.getElementById('documento');
+  const campo_telefone = document.getElementById('telefone');
+  const campo_mensagem = document.getElementById('mensagem');
 
-  esconderErro(error_nome);
-  esconderErro(error_email);
-  esconderErro(error_empresa);
-  esconderErro(error_telefone);
-  esconderErro(error_mensagem);
 
+
+  esconderErros(erros_form, erro_header, erros_text, erro);
 
   // COLOQUE SEU NÚMERO AQUI (Apenas números, com DDD e código do país)
   const meuNumero = "5511975862805";
 
-  if (campo_nome === "") {
-    erro += mostrarErro(error_nome, 'Por favor, digite seu nome');
+  if (campo_nome.value == "") {
+    erro += 'Por favor, digite seu nome';
+    alterarCorDoInput(campo_nome);
+  } else{
+    normalizarCorDoInput(campo_nome);
   }
-  if (campo_email === "") {
+  if (campo_email.value == "") {
+    alterarCorDoInput(campo_email);
+    erro += '<br>Por favor, digite seu e-mail';
+  }else{
+    normalizarCorDoInput(campo_email);
+  }
+  if (campo_empresa.value == "") {
+    alterarCorDoInput(campo_empresa);
+    erro += '<br>Por favor, digite o nome da empresa';
+  }else{
+    normalizarCorDoInput(campo_empresa);
+  }
+  if (campo_telefone.value == "") {
+    alterarCorDoInput(campo_telefone);
+    erro += '<br>Por favor, digite um telefone para contato';
+  }else{
+    normalizarCorDoInput(campo_telefone);
+  }
+  if (campo_mensagem.value == "") {
+    alterarCorDoInput(campo_mensagem);
+    erro += '<br>Por favor, digite uma mensagem';
+  }else{
+    normalizarCorDoInput(campo_mensagem);
+  }
+  if (erro !== "") {
 
-    erro += mostrarErro(error_email, 'Por favor, digite seu e-mail');
-  }
-  if (campo_empresa === "") {
+    erros_text.innerHTML = erro;
+    mostrarErros(erros_form, erro_header, erros_text);
 
-    erro += mostrarErro(error_empresa, 'Por favor, digite o nome da empresa');
-  }
-  if (campo_telefone === "") {
 
-    erro += mostrarErro(error_telefone, 'Por favor, digite um telefone para contato');
-  }
-  if (campo_mensagem === "") {
+  } else {
 
-    erro += mostrarErro(error_mensagem, 'Por favor, digite uma mensagem');
-  }
-  if (erro == "") {
-    const texto = `*Novo Contato via GDA*%0A%0A` +
-      `*Nome:* ${campo_nome}%0A` +
-      `*E-mail:* ${campo_email}%0A` +
-      `*Empresa:* ${campo_empresa}%0A` +
-      `*CPF/CNPJ:* ${campo_documento}%0A` +
-      `*Telefone:* ${campo_telefone}%0A` +
-      `*Mensagem:* ${campo_mensagem}`;
+
+    const texto = `Olá! Meu nome é ${campo_nome.value} essas são minhas informações: \n  %0AEmail: ${campo_email.value} \n %0Acpf/cnpj: ${campo_documento.value} \n %0Aempresa: ${campo_empresa.value}\n %0Atelefone: ${campo_telefone.value} \n %0AMensagem: ${campo_mensagem.value}`;
 
     // Monta o link da API
     const url = `https://api.whatsapp.com/send?phone=${meuNumero}&text=${texto}`;
@@ -57,21 +65,36 @@ function enviarWhatsApp() {
     // Abre em uma nova aba
     window.open(url, '_blank');
 
-
   }
 }
+function alterarCorDoInput(input) {
+  input.style.borderColor = "red";
+}
+function normalizarCorDoInput(input) {
+  input.style.borderColor = "#14AE5C";
+}
+function mostrarErros(CampoUm, CampoDois, CampoTres) {
+  CampoUm.classList.remove('esconder');
+  CampoUm.classList.add('mostrar');
+  CampoUm.classList.add('erros_form');
+  CampoDois.classList.remove('esconder');
+  CampoDois.classList.add('mostrar')
+  CampoTres.classList.remove('esconder');
+  CampoTres.classList.add('mostrar');
 
-function mostrarErro(nome_campo, mensagem) {
-  nome_campo.classList.remove('esconder');
-  nome_campo.classList.add('mostrar');
-  nome_campo.classList.add('gda_erro');
-  nome_campo.innerText = mensagem;
 }
 
-function esconderErro(nome_campo) {
-  nome_campo.classList.remove('mostrar');
-  nome_campo.classList.add('esconder');
+function esconderErros(CampoUm, CampoDois, CampoTres) {
+  CampoUm.classList.remove('mostrar');
+  CampoUm.classList.remove('erros_form');
+  CampoUm.classList.add('esconder');
+  CampoDois.classList.remove('mostrar');
+  CampoDois.classList.add('esconder')
+  CampoTres.classList.remove('mostrar');
+  CampoTres.classList.add('esconder');
+  CampoTres = "";
 }
+
 
 /*
    async function getCotacao(siglaPais) {

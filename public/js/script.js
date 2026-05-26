@@ -96,6 +96,25 @@ function esconderErros(CampoUm, CampoDois, CampoTres) {
 }
 
 
+function login(){
+
+  const btnEntrar = document.getElementById('btnEntrar');
+  var btnEmail = document.getElementById('emailInput');
+  var btnSenha = document.getElementById('senhaInput');
+  let campoLogin = document.getElementById('erro_login');
+  let msgErroLogin = document.getElementById('msg_erro_login');
+
+  if (btnEmail.value == 'admin' && btnSenha.value == 'admin'){
+    btnEntrar.href = "loading_login.php";
+  } else {
+    mostrarErros(campoLogin);
+    campoLogin.classList.remove('erros_form');
+    campoLogin.classList.add('erros_login');
+    alterarCorDoInput(btnEmail);
+    alterarCorDoInput(btnSenha);
+  }
+}
+
 /*
    async function getCotacao(siglaPais) {
  const token = "64072b1d9c4f1ea12f3d0d530ce10cfbaeffe55916fd73d0fa3d8e7e7a9cdab6";

@@ -5,7 +5,7 @@
 </head>
 <body class="gda_login_page">
 
-  <div class="gda_login_wrapper">
+  <div class="gda_login_wrapper container">
     <div class="text-center mb-4">
       <a href="index.php">
         <img src="../assets/img/logo.png" alt="GDA" class="gda_login_logo">

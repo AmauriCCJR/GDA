@@ -15,12 +15,14 @@
 
     <div class="gda_login_card">
       <h2 class="gda_login_title">Acesse sua Conta</h2>
-
+      <div class="erro_login esconder" id="erro_login">
+        <p class="msg_erro_login" id="msg_erro_login"><i class="fa-solid fa-circle-exclamation"></i> E-mail ou senha incorretos. Verifique suas credenciais e tente novamente.</p>
+      </div>
       <div class="mb-3">
         <label class="form-label gda_form_label">E-mail</label>
         <div class="gda_input_icon_wrap">
           <i class="fa-solid fa-envelope gda_input_icon"></i>
-          <input type="email" class="form-control gda_login_input gda_input_with_icon_right" placeholder="seu@email.com">
+          <input type="email" class="form-control gda_login_input gda_input_with_icon_right" placeholder="Seu@email.com" id="emailInput">
         </div>
       </div>
 
@@ -28,7 +30,7 @@
         <label class="form-label gda_form_label">Senha</label>
         <div class="gda_input_icon_wrap">
           <i class="fa-solid fa-lock gda_input_icon"></i>
-          <input type="password" class="form-control gda_login_input gda_input_with_icon_right" id="senhaInput" placeholder="digite sua senha aqui">
+          <input type="password" class="form-control gda_login_input gda_input_with_icon_right" id="senhaInput" placeholder="Digite sua senha aqui">
           <button type="button" class="gda_toggle_senha" onclick="toggleSenha()">
             <i class="fa-regular fa-eye" id="olhoIcon"></i>
           </button>
@@ -43,12 +45,12 @@
         <a href="recuperar_senha.php" class="gda_forgot_link">Esqueci minha senha</a>
       </div>
 
-      <a class="btn btn-success w-100 gda_btn_login gda_cor_btn" href="loading_login.php">Entrar</a>
+      <a class="btn btn-success w-100 gda_btn_login gda_cor_btn" href="#" id="btnEntrar" onclick="login()">Entrar</a>
 
       <hr class="gda_login_divider">
 
       <p class="text-center gda_no_access_text">Ainda não tem acesso?</p>
-      <a href="registro.php" class="btn btn-outline-success w-100 gda_btn_solicitar">Solicitar Acesso</a>
+      <a href="solicitar_acesso.php" class="btn btn-outline-success w-100 gda_btn_solicitar">Solicitar Acesso</a>
     </div>
 
     <div class="text-center mt-4">

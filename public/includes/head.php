@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 <link rel="stylesheet" href="css/dashboard.css">
 <link rel="stylesheet" href="css/everypage.css">
-<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/style.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <script src = "js/script.js"></script>
 <?php 

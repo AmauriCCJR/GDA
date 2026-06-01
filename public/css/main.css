@@ -469,3 +469,6 @@ footer ul li a {
 	padding: 0 30px;
 	height: 40px;
 }
+.sa_enviar{
+	background-color: var(--cor-tema);
+}

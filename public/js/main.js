@@ -15,37 +15,36 @@ function enviarWhatsApp() {
 
   esconderErros(erros_form, erro_header, erros_text, erro);
 
-  // COLOQUE SEU NÚMERO AQUI (Apenas números, com DDD e código do país)
   const meuNumero = "5511975862805";
 
   if (campo_nome.value == "") {
     erro += 'Por favor, digite seu nome';
     alterarCorDoInput(campo_nome);
-  } else{
+  } else {
     normalizarCorDoInput(campo_nome);
   }
   if (campo_email.value == "") {
     alterarCorDoInput(campo_email);
     erro += '<br>Por favor, digite seu e-mail';
-  }else{
+  } else {
     normalizarCorDoInput(campo_email);
   }
   if (campo_empresa.value == "") {
     alterarCorDoInput(campo_empresa);
     erro += '<br>Por favor, digite o nome da empresa';
-  }else{
+  } else {
     normalizarCorDoInput(campo_empresa);
   }
   if (campo_telefone.value == "") {
     alterarCorDoInput(campo_telefone);
     erro += '<br>Por favor, digite um telefone para contato';
-  }else{
+  } else {
     normalizarCorDoInput(campo_telefone);
   }
   if (campo_mensagem.value == "") {
     alterarCorDoInput(campo_mensagem);
     erro += '<br>Por favor, digite uma mensagem';
-  }else{
+  } else {
     normalizarCorDoInput(campo_mensagem);
   }
   if (erro !== "") {
@@ -58,6 +57,77 @@ function enviarWhatsApp() {
 
 
     const texto = `Olá! Meu nome é ${campo_nome.value} essas são minhas informações: \n  %0AEmail: ${campo_email.value} \n %0Acpf/cnpj: ${campo_documento.value} \n %0Aempresa: ${campo_empresa.value}\n %0Atelefone: ${campo_telefone.value} \n %0AMensagem: ${campo_mensagem.value}`;
+
+    // Monta o link da API
+    const url = `https://api.whatsapp.com/send?phone=${meuNumero}&text=${texto}`;
+
+    // Abre em uma nova aba
+    window.open(url, '_blank');
+
+  }
+}
+
+function solicitarAcesso() {
+  var erro = "";
+  let SA_erros_form = document.getElementById('SA_erros_form');
+  let SA_erro_header = document.getElementById('SA_erro_header');
+  let SA_erros_text = document.getElementById('SA_erros_text');
+  let SA_campo_nome = document.getElementById('SA_nome');
+  let SA_campo_email = document.getElementById('SA_email');
+  let SA_campo_empresa = document.getElementById('SA_empresa');
+  let SA_campo_documento = document.getElementById('SA_doc');
+  let SA_campo_telefone = document.getElementById('SA_telefone');
+  let SA_campo_mensagem = document.getElementById('SA_msg');
+
+  esconderErros(SA_erros_form, SA_erro_header, SA_erros_text);
+
+  const meuNumero = "5511975862805";
+
+  if (SA_campo_nome.value == "") {
+    erro += 'Por favor, digite seu nome';
+    alterarCorDoInput(SA_campo_nome);
+  } else {
+    normalizarCorDoInput(SA_campo_nome);
+  }
+  if (SA_campo_email.value == "") {
+    alterarCorDoInput(SA_campo_email);
+    erro += '<br>Por favor, digite seu e-mail';
+  } else {
+    normalizarCorDoInput(SA_campo_email);
+  }
+  if (SA_campo_empresa.value == "") {
+    alterarCorDoInput(SA_campo_empresa);
+    erro += '<br>Por favor, digite o nome da empresa';
+  } else {
+    normalizarCorDoInput(SA_campo_empresa);
+  }
+  if (SA_campo_telefone.value == "") {
+    alterarCorDoInput(SA_campo_telefone);
+    erro += '<br>Por favor, digite um telefone para contato';
+  } else {
+    normalizarCorDoInput(SA_campo_telefone);
+  }
+  if (SA_campo_mensagem.value == "") {
+    alterarCorDoInput(SA_campo_mensagem);
+    erro += '<br>Por favor, digite uma mensagem';
+  } else {
+    normalizarCorDoInput(SA_campo_mensagem);
+  }
+  if (erro !== "") {
+
+    SA_erros_text.innerHTML = erro;
+    mostrarErros(SA_erros_form, SA_erro_header, SA_erros_text);
+
+
+  } else {
+
+
+    const texto = `Olá! Meu nome é ${SA_campo_nome.value} essas são minhas informações: 
+    \n  %0AEmail: ${SA_campo_email.value}, 
+    \n %0Acpf/cnpj: ${SA_campo_documento.value}, 
+    \n %0Aempresa: ${SA_campo_empresa.value}\n,
+    %0Atelefone: ${SA_campo_telefone.value} \n,
+    %0AMensagem: ${SA_campo_mensagem.value}`;
 
     // Monta o link da API
     const url = `https://api.whatsapp.com/send?phone=${meuNumero}&text=${texto}`;
@@ -95,16 +165,14 @@ function esconderErros(CampoUm, CampoDois, CampoTres) {
   CampoTres = "";
 }
 
-
-function login(){
-
+function login() {
   const btnEntrar = document.getElementById('btnEntrar');
   var btnEmail = document.getElementById('emailInput');
   var btnSenha = document.getElementById('senhaInput');
   let campoLogin = document.getElementById('erro_login');
   let msgErroLogin = document.getElementById('msg_erro_login');
 
-  if (btnEmail.value == 'admin' && btnSenha.value == 'admin'){
+  if (btnEmail.value == 'admin' && btnSenha.value == 'admin') {
     btnEntrar.href = "loading_login.php";
   } else {
     mostrarErros(campoLogin);

@@ -39,7 +39,7 @@
 
       <div class="d-flex justify-content-between align-items-center mb-4">
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="lembrarMe">
+          <input class="form-check-input success" type="checkbox" id="lembrarMe">
           <label class="form-check-label gda_check_label" for="lembrarMe">Lembrar-me</label>
         </div>
         <a href="recuperar_senha.php" class="gda_forgot_link">Esqueci minha senha</a>

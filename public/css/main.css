@@ -472,3 +472,8 @@ footer ul li a {
 .sa_enviar{
 	background-color: var(--cor-tema);
 }
+
+input[type="checkbox"]:checked {
+  background-color: var(--cor-tema); /* ← sua cor aqui */
+  border-color: var(--cor-btn);
+}

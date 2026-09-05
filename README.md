@@ -10,7 +10,7 @@
 ## Ferramentas utilizadas
 - Javascript
 - PHP 
-- PostgreSQL
+- MySQL
 - CodeIgniter 4
 
 

@@ -7,8 +7,8 @@
 
   <div class="gda_login_wrapper">
     <div class="text-center mb-4">
-      <a href="index.php">
-        <img src="../assets/img/logo.png" alt="GDA" class="gda_login_logo">
+      <a href="<?= base_url('/') ?>">
+        <img src="<?= base_url('assets/img/logo.png') ?>" alt="GDA" class="gda_login_logo">
       </a>
       <p class="gda_login_subtitle">Gestão de Processos Aduaneiros</p>
     </div>
@@ -28,7 +28,7 @@
       <button class="btn btn-success w-100 gda_btn_login gda_cor_btn" type="submit">Enviar</button>
 
       <div class="text-center mt-4">
-        <a href="login.php" class="gda_back_link">
+        <a href="<?= base_url('login') ?>" class="gda_back_link">
           <i class="fa-solid fa-chevron-left me-1"></i> Voltar para o login
         </a>
       </div>

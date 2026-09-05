@@ -31,7 +31,7 @@
       <a href="<?= base_url('/') ?>" class="mb-0">
         <img src="<?= base_url('assets/img/logo_footer2.png') ?>" alt="GDA" class="gda_footer_logo">
       </a>
-
+      
       <div class="gda_footer_rede text-center p-3">
         <h5 class="gda_footer_title_rede mb-3">Nossas Redes</h5>
         <div class="d-flex justify-content-center gap-3">
@@ -45,3 +45,4 @@
 
   </div>
 </div>
+

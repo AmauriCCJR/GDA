@@ -17,7 +17,7 @@
   <!-- Logo -->
   <div class="logo-area">
     <!-- SVG do logo GDA (simplificado) -->
-    <img src="../assets/img/logo.png">
+    <img src="<?= base_url('assets/img/logo.png') ?>">
     <p>Gestão de Processos Aduaneiros</p>
   </div>
 
@@ -90,7 +90,7 @@
 </form>
     <!-- Voltar ao login -->
     <div class="back-link">
-      Lembrou sua senha? <a href="login.php">Voltar ao login</a>
+      Lembrou sua senha? <a href="<?= base_url('login') ?>">Voltar ao login</a>
     </div>
 
   </div>

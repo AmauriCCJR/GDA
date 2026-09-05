@@ -17,20 +17,20 @@
         <div class="gda-topbar-user-name">Administrador</div>
         <div class="gda-topbar-user-email">admin@gda.com.br</div>
       </div>
-     <a href="index.php">
+     <a href="<?= base_url('/') ?>">
       <div class="gda-avatar">A</div>
       </a>
   </header>
 
   <!-- TABS -->
   <div class="gda-tabs-bar">
-    <a href="dashboard_admin_plataforma.php" class="gda-tab">
+    <a href="<?= base_url('dashboard-admin-plataforma') ?>" class="gda-tab">
       <i class="fa-solid fa-table-cells-large"></i> Dashboard
     </a>
     <a href="#" class="gda-tab">
       <i class="fa-regular fa-file-lines"></i> Processos
     </a>
-    <a href="empresas_admin_plataforma.php" class="gda-tab active">
+    <a href="<?= base_url('dashboard-admin-plataforma') ?>" class="gda-tab active">
       <i class="fa-solid fa-building"></i> Empresas
     </a>
     <a href="#" class="gda-tab">

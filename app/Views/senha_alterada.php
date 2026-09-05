@@ -14,7 +14,7 @@
   <!-- Logo -->
   <div class="d-flex flex-column align-items-center gap-2 mb-4">
     <div class="">
-      <img src="../assets/img/logo.png">
+      <img src="<?= base_url('assets/img/logo.png') ?>">
     </div>
     <span class="logo-name">Gestão de Processos Aduaneiros</span>
   </div>
@@ -39,13 +39,13 @@
     <hr class="gda-divider">
 
     <!-- Botão -->
-    <a href="login.php" class="btn-gda">
+    <a href="<?= base_url('login') ?>" class="btn-gda">
       Fazer Login
     </a>
 
     <!-- Rodapé -->
     <p class="card-footer-gda mt-3 mb-0">
-      Precisa de ajuda? <a href="duvidas_frequentes.php">Acesse dúvidas frequentes</a>
+      Precisa de ajuda? <a href="<?= base_url('duvidas-frequentes') ?>">Acesse dúvidas frequentes</a>
     </p>
 
   </div>

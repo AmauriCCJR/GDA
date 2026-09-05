@@ -7,8 +7,8 @@
 
   <div class="gda_login_wrapper">
     <div class="text-center mb-4">
-      <a href="../index.php">
-        <img src="../assets/img/logo.png" alt="GDA" class="gda_login_logo">
+      <a href="<?= base_url('/') ?>">
+        <img src="<?= base_url('assets/img/logo.png') ?>" alt="GDA" class="gda_login_logo">
       </a>
       <p class="gda_login_subtitle">Gestão de Processos Aduaneiros</p>
     </div>
@@ -42,7 +42,7 @@
           <input class="form-check-input success" type="checkbox" id="lembrarMe">
           <label class="form-check-label gda_check_label" for="lembrarMe">Lembrar-me</label>
         </div>
-        <a href="recuperar_senha.php" class="gda_forgot_link">Esqueci minha senha</a>
+        <a href="<?= base_url('recuperar-senha') ?>" class="gda_forgot_link">Esqueci minha senha</a>
       </div>
 
       <a class="btn btn-success w-100 gda_btn_login gda_cor_btn" href="#" id="btnEntrar" onclick="login()">Entrar</a>
@@ -50,11 +50,11 @@
       <hr class="gda_login_divider">
 
       <p class="text-center gda_no_access_text">Ainda não tem acesso?</p>
-      <a href="solicitar_acesso.php" class="btn btn-outline-success w-100 gda_btn_solicitar">Solicitar Acesso</a>
+      <a href="<?= base_url('solicitar-acesso') ?>" class="btn btn-outline-success w-100 gda_btn_solicitar">Solicitar Acesso</a>
     </div>
 
     <div class="text-center mt-4">
-      <a href="../index.php" class="gda_back_link">
+      <a href="<?= base_url('/') ?>" class="gda_back_link">
         <i class="fa-solid fa-chevron-left me-1"></i> Voltar para o site
       </a>
     </div>

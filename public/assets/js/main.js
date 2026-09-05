@@ -183,44 +183,50 @@ function login() {
   }
 }
 
-/*
-   async function getCotacao(siglaPais) {
- const token = "64072b1d9c4f1ea12f3d0d530ce10cfbaeffe55916fd73d0fa3d8e7e7a9cdab6";
- const url = `https://economia.awesomeapi.com.br/json/last/${siglaPais}?token=${token}`;
+async function getCotacao(siglaPais) {
+  const token = '64072b1d9c4f1ea12f3d0d530ce10cfbaeffe55916fd73d0fa3d8e7e7a9cdab6';
+  const url = `https://economia.awesomeapi.com.br/json/last/${siglaPais}?token=${token}`;
 
- try {
-   const response = await fetch(url);
+  try {
+    const response = await fetch(url);
 
-   if (!response.ok) return "Erro ao consultar API";
+    if (!response.ok) return 'Erro ao consultar API';
 
-   const data = await response.json();
-   const chave = siglaPais.replace('-', '');
-   const cotacao = data[chave]?.bid ?? "Cotação não encontrada";
+    const data = await response.json();
+    const chave = siglaPais.replace('-', '');
+    const cotacao = data[chave]?.bid ?? 'Cotação não encontrada';
 
-   if (typeof cotacao !== 'number' && isNaN(parseFloat(cotacao))) {
-     return cotacao;
-   }
+    if (typeof cotacao !== 'number' && isNaN(parseFloat(cotacao))) {
+      return cotacao;
+    }
 
-   const decimais = siglaPais === 'PYG-BRL' ? 6 : 2;
+    const decimais = siglaPais === 'PYG-BRL' ? 6 : 2;
 
-   return parseFloat(cotacao).toLocaleString('pt-BR', {
-     minimumFractionDigits: decimais,
-     maximumFractionDigits: decimais,
-   });
-
- } catch (error) {
-   return "Erro ao consultar API";
- }
+    return parseFloat(cotacao).toLocaleString('pt-BR', {
+      minimumFractionDigits: decimais,
+      maximumFractionDigits: decimais,
+    });
+  } catch (error) {
+    return 'Erro ao consultar API';
+  }
 }
 
 async function carregarCotacoes() {
-   document.getElementById('cotacao-usd').textContent = await getCotacao('USD-BRL');
-   document.getElementById('cotacao-eur').textContent = await getCotacao('EUR-BRL');
-   document.getElementById('cotacao-pyg').textContent = await getCotacao('PYG-BRL');
-   document.getElementById('cotacao-gbp').textContent = await getCotacao('GBP-BRL');
-   document.getElementById('cotacao-cad').textContent = await getCotacao('CAD-BRL');
+  const elementos = [
+    ['cotacao-usd', 'USD-BRL'],
+    ['cotacao-eur', 'EUR-BRL'],
+    ['cotacao-pyg', 'PYG-BRL'],
+    ['cotacao-gbp', 'GBP-BRL'],
+    ['cotacao-cad', 'CAD-BRL'],
+  ];
+
+  for (const [id, sigla] of elementos) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.textContent = await getCotacao(sigla);
+    }
+  }
 }
-   */
 function toggleSenha() {
   const input = document.getElementById('senhaInput');
   const icon = document.getElementById('olhoIcon');

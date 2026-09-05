@@ -7,8 +7,8 @@
 
   <div class="gda_login_wrapper container">
     <div class="text-center mb-4">
-      <a href="index.php">
-        <img src="../assets/img/logo.png" alt="GDA" class="gda_login_logo">
+      <a href="<?= base_url('/') ?>">
+        <img src="<?= base_url('assets/img/logo.png') ?>" alt="GDA" class="gda_login_logo">
       </a>
       <p class="gda_login_subtitle">Gestão de Processos Aduaneiros</p>
     </div>
@@ -58,7 +58,7 @@
     
 
     <div class="text-center mt-4">
-      <a href="index.php" class="gda_back_link">
+      <a href="<?= base_url('/') ?>" class="gda_back_link">
         <i class="fa-solid fa-chevron-left me-1"></i> Voltar para tela inicial
       </a>
     </div>

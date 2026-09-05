@@ -98,7 +98,7 @@
     requestAnimationFrame(frame);
 
     setTimeout(function() {
-      var dest = new URLSearchParams(window.location.search).get('dest') || 'dashboard_admin_plataforma.php';
+      var dest = new URLSearchParams(window.location.search).get('dest') || '<?= base_url('dashboard-admin-plataforma') ?>';
       window.location.href = dest;
     }, 3000);
   </script>

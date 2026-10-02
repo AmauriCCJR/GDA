@@ -2,14 +2,14 @@
 <html lang="pt-BR">
 <head>
   <?php include 'includes/head.php'; ?>
-  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="<?= base_url('assets/css/dashboard.css') ?>">
 </head>
 <body class="gda-dash-body">
 
   <!-- TOPBAR -->
   <header class="gda-topbar">
     <div class="gda-topbar-brand">
-      <img src="../assets/img/logo.png" alt="GDA" class="gda-topbar-logo">
+      <img src="<?= base_url('assets/img/logo.png') ?>" alt="GDA" class="gda-topbar-logo">
       <span class="gda-topbar-title">Painel Administrativo da Plataforma</span>
     </div>
     <div class="gda-topbar-user">

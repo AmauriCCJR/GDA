@@ -49,7 +49,7 @@
 
 <body class="gda-loading-screen">
 
-  <img src="../assets/img/logo.png" alt="GDA" class="gda-loading-logo">
+  <img src="<?= base_url('assets/img/logo.png') ?>" alt="GDA" class="gda-loading-logo">
 
   <div class="gda-orbit-ring" id="gdaRing">
     <div class="gda-orb"></div>

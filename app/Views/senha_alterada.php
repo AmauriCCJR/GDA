@@ -6,7 +6,7 @@
   <title>Senha Alterada — GDA</title>
   <?php include 'includes/head.php' ?>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/email_confir.css">
+  <link rel="stylesheet" href="<?= base_url('assets/css/email_confir.css') ?>">
 </head>
 <body>
 

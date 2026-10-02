@@ -4,10 +4,10 @@
     <div class="col-lg-3 col-md-6 col-12 text-start">
       <h5 class="gda_footer_title">Plataforma</h5>
       <ul class="list-unstyled gda_footer_li">
-        <li><a href="#">Otimize sua Importação</a></li>
-        <li><a href="#">Simplifique sua Exportação</a></li>
-        <li><a href="#">Gestão Inteligente de Armazéns</a></li>
-        <li><a href="#">Consultoria Aduaneira Especializada</a></li>
+        <li><p>Otimize sua Importação</p></li>
+        <li><p>Simplifique sua Exportação</p></li>
+        <li><p>Gestão Inteligente de Armazéns</p></li>
+        <li><p>Consultoria Aduaneira Especializada</p></li>
       </ul>
     </div>
 
@@ -45,3 +45,5 @@
 
   </div>
 </div>
+
+<script src="<? base_url('js/main.js')?>"></script>

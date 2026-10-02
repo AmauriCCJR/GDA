@@ -19,3 +19,4 @@ $routes->get('dashboard-admin-plataforma', 'DashboardAdminPlataforma::index');
 $routes->get('dashboard-admin-empresa', 'DashboardAdminEmpresa::index');
 $routes->get('loading-login', 'LoadingLogin::index');
 $routes->get('loading-signout', 'LoadingSignout::index');
+$routes->get('cotacao', 'Cotacao::index');

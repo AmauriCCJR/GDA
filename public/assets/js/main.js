@@ -183,50 +183,33 @@ function login() {
   }
 }
 
-async function getCotacao(siglaPais) {
-  const token = '64072b1d9c4f1ea12f3d0d530ce10cfbaeffe55916fd73d0fa3d8e7e7a9cdab6';
-  const url = `https://economia.awesomeapi.com.br/json/last/${siglaPais}?token=${token}`;
-
-  try {
-    const response = await fetch(url);
-
-    if (!response.ok) return 'Erro ao consultar API';
-
-    const data = await response.json();
-    const chave = siglaPais.replace('-', '');
-    const cotacao = data[chave]?.bid ?? 'Cotação não encontrada';
-
-    if (typeof cotacao !== 'number' && isNaN(parseFloat(cotacao))) {
-      return cotacao;
-    }
-
-    const decimais = siglaPais === 'PYG-BRL' ? 6 : 2;
-
-    return parseFloat(cotacao).toLocaleString('pt-BR', {
-      minimumFractionDigits: decimais,
-      maximumFractionDigits: decimais,
-    });
-  } catch (error) {
-    return 'Erro ao consultar API';
-  }
-}
 
 async function carregarCotacoes() {
-  const elementos = [
-    ['cotacao-usd', 'USD-BRL'],
-    ['cotacao-eur', 'EUR-BRL'],
-    ['cotacao-pyg', 'PYG-BRL'],
-    ['cotacao-gbp', 'GBP-BRL'],
-    ['cotacao-cad', 'CAD-BRL'],
-  ];
+  try {
+    const response = await fetch('/cotacao');
+    if (!response.ok) throw new Error('Resposta inválida: ' + response.status);
+    const data = await response.json();
 
-  for (const [id, sigla] of elementos) {
-    const el = document.getElementById(id);
-    if (el) {
-      el.textContent = await getCotacao(sigla);
+    const moedas = {
+      'cotacao-usd': 'USDBRL',
+      'cotacao-eur': 'EURBRL',
+      'cotacao-gbp': 'GBPBRL',
+      'cotacao-cad': 'CADBRL',
+      'cotacao-pyg': 'PYGBRL',
+    };
+
+    for (const [id, chave] of Object.entries(moedas)) {
+      const el = document.getElementById(id);
+      if (el && data[chave]) {
+        el.textContent = parseFloat(data[chave].bid).toFixed(2);
+      }
     }
+  } catch (error) {
+    console.error('Erro ao carregar cotações:', error);
   }
 }
+document.addEventListener('DOMContentLoaded', carregarCotacoes);
+
 function toggleSenha() {
   const input = document.getElementById('senhaInput');
   const icon = document.getElementById('olhoIcon');

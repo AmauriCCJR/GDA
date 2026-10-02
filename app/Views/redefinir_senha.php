@@ -7,7 +7,7 @@
   <?php include 'includes/head.php' ?>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/senha.css">
+  <link rel="stylesheet" href="<?= base_url('assets/css/senha.css') ?>">
 
 </head>
 <body>
@@ -31,7 +31,7 @@
 
     <h1 class="card-title">Redefinir senha</h1>
     <p class="card-subtitle">Crie uma nova senha segura para sua conta GDA.</p>
-    <form action="senha_alterada.php" method="post">
+    <form action="<?= base_url('senha-alterada') ?>" method="post">
     <!-- Campo: nova senha -->
     <div class="mb-1">
       <label class="form-label" for="novaSenha">Senha</label>

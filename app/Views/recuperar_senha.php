@@ -13,7 +13,7 @@
       <p class="gda_login_subtitle">Gestão de Processos Aduaneiros</p>
     </div>
 
-    <form class="gda_login_card" method="post" action="mail/enviar_email.php">
+    <form class="gda_login_card" method="post" action="<?= base_url('recuperar-senha') ?>">
       <h2 class="gda_login_title">Recuperar Senha</h2>
       <p class="gda_recover_desc">Digite seu e-mail para receber instruções</p>
 

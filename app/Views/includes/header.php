@@ -11,16 +11,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4">
           <li class="nav-item">
-            <a class="nav-link" href="#servicos">Serviços</a>
+            <a class="nav-link" href="<?= base_url('/#servicos') ?>">Serviços</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#cotacao">Cotação do dia</a>
+            <a class="nav-link" href="<?= base_url('/#cotacao') ?>">Cotação do dia</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#depoimento">Depoimentos</a>
+            <a class="nav-link" href="<?= base_url('/#depoimento') ?>">Depoimentos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#planos">Planos</a>
+            <a class="nav-link" href="<?= base_url('/#planos') ?>">Planos</a>
           </li>
         </ul>
 

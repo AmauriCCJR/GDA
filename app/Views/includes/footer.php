@@ -27,11 +27,12 @@
       </ul>
     </div>
 
-    <div class="col-lg-3 col-md-6 col-12 d-flex flex-column align-items-lg-end align-items-center">
+    <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-lg-end justify-content-center">
+     <div class="gda_footer_marca d-flex flex-column align-items-center">
       <a href="<?= base_url('/') ?>" class="mb-0">
         <img src="<?= base_url('assets/img/logo_footer2.png') ?>" alt="GDA" class="gda_footer_logo">
       </a>
-      
+
       <div class="gda_footer_rede text-center p-3">
         <h5 class="gda_footer_title_rede mb-3">Nossas Redes</h5>
         <div class="d-flex justify-content-center gap-3">
@@ -41,6 +42,7 @@
           <a href="<?= base_url('contatos') ?>" class="icon-footer"><img src="<?= base_url('assets/img/facebook.png') ?>" alt="Facebook"></a>
         </div>
       </div>
+     </div>
     </div>
 
   </div>

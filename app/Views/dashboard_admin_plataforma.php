@@ -31,7 +31,7 @@
     <a href="#" class="gda-tab">
       <i class="fa-regular fa-file-lines"></i> Processos
     </a>
-    <a href="<?= base_url('dashboard-admin-plataforma') ?>" class="gda-tab">
+    <a href="<?= base_url('empresas-admin-plataforma') ?>" class="gda-tab">
       <i class="fa-solid fa-building"></i> Empresas
     </a>
     <a href="#" class="gda-tab">

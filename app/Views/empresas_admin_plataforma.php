@@ -17,7 +17,7 @@
         <div class="gda-topbar-user-name">Administrador</div>
         <div class="gda-topbar-user-email">admin@gda.com.br</div>
       </div>
-     <a href="<?= base_url('/') ?>">
+     <a href="<?= base_url('loading-signout') ?>">
       <div class="gda-avatar">A</div>
       </a>
   </header>
@@ -30,7 +30,7 @@
     <a href="#" class="gda-tab">
       <i class="fa-regular fa-file-lines"></i> Processos
     </a>
-    <a href="<?= base_url('dashboard-admin-plataforma') ?>" class="gda-tab active">
+    <a href="<?= base_url('empresas-admin-plataforma') ?>" class="gda-tab active">
       <i class="fa-solid fa-building"></i> Empresas
     </a>
     <a href="#" class="gda-tab">

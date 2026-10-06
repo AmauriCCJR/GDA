@@ -166,42 +166,47 @@ function esconderErros(CampoUm, CampoDois, CampoTres) {
 }
 
 function login() {
-  const btnEntrar = document.getElementById('btnEntrar');
-  var btnEmail = document.getElementById('emailInput');
-  var btnSenha = document.getElementById('senhaInput');
-  let campoLogin = document.getElementById('erro_login');
-  let msgErroLogin = document.getElementById('msg_erro_login');
+  const email = document.getElementById('emailInput');
+  const senha = document.getElementById('senhaInput');
+  const campoLogin = document.getElementById('erro_login');
 
-  if (btnEmail.value == 'admin' && btnSenha.value == 'admin') {
-    btnEntrar.href = "loading_login.php";
+  if (email.value === 'admin' && senha.value === 'admin') {
+    window.location.href = BASE_URL + 'loading-login';
   } else {
-    mostrarErros(campoLogin);
-    campoLogin.classList.remove('erros_form');
-    campoLogin.classList.add('erros_login');
-    alterarCorDoInput(btnEmail);
-    alterarCorDoInput(btnSenha);
+    campoLogin.classList.remove('esconder');
+    campoLogin.classList.add('mostrar', 'erros_login');
+    alterarCorDoInput(email);
+    alterarCorDoInput(senha);
   }
 }
 
 
 async function carregarCotacoes() {
+  if (!document.getElementById('cotacao-usd')) return;
+  if (!document.getElementById('cotacao-eur')) return;
+  if (!document.getElementById('cotacao-gbp')) return;
+  if (!document.getElementById('cotacao-cad')) return;
+  if (!document.getElementById('cotacao-pyg')) return;
   try {
-    const response = await fetch('/cotacao');
+    const response = await fetch(BASE_URL + 'cotacao');
     if (!response.ok) throw new Error('Resposta inválida: ' + response.status);
     const data = await response.json();
 
     const moedas = {
-      'cotacao-usd': 'USDBRL',
-      'cotacao-eur': 'EURBRL',
-      'cotacao-gbp': 'GBPBRL',
-      'cotacao-cad': 'CADBRL',
-      'cotacao-pyg': 'PYGBRL',
+      'cotacao-usd': { chave:'USDBRL', casas: 2},
+      'cotacao-eur': { chave:'EURBRL', casas: 2},
+      'cotacao-gbp': { chave:'GBPBRL', casas: 2},
+      'cotacao-cad': { chave:'CADBRL', casas: 2},
+      'cotacao-pyg': {chave:'PYGBRL', casas: 5}
     };
 
-    for (const [id, chave] of Object.entries(moedas)) {
+    for (const [id, {chave, casas}] of Object.entries(moedas)) {
       const el = document.getElementById(id);
       if (el && data[chave]) {
-        el.textContent = parseFloat(data[chave].bid).toFixed(2);
+        el.textContent = parseFloat(data[chave].bid).toLocaleString('pt-BR', {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: casas,
+        });
       }
     }
   } catch (error) {
@@ -232,7 +237,7 @@ document.querySelectorAll('.gda_filter_btn').forEach(btn => {
     });
   });
 });
-document.getElementById('faqSearch').addEventListener('input', function () {
+document.getElementById('faqSearch')?.addEventListener('input', function () {
   const q = this.value.toLowerCase();
   document.querySelectorAll('.gda_faq_item').forEach(item => {
     item.style.display = item.innerText.toLowerCase().includes(q) ? '' : 'none';

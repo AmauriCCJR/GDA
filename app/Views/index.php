@@ -53,7 +53,7 @@
 
       <div class="col-12 col-lg-3 col-md-6 d-flex justify-content-center">
         <section class="gda_services_card " style="--corVariavel: #2563EB">
-          <img src="<?= base_url('assets/img/importar.png') ?>" class="gda_icon_home" alt="...">
+          <img src="<?= base_url('assets/img/Importar.png') ?>" class="gda_icon_home" alt="...">
           <h5 class="gda_services_card_title">Importação</h5>
           <p class="card-text">Gestão completa de processos de importação com controle de documentos e prazos</p>
         </section>
@@ -99,22 +99,14 @@
         <div class="col-lg-2 col-12">
           <div class="gda_cotacao_card">
             <h5 class="gda_cotacao_title">Dólar - USD</h5>
-            <p class='gda_cotacao_valor'>R$ <span id="cotacao-usd">
-                <script>
-                  carregarCotacoes()
-                </script>
-              </span></p>
+            <p class='gda_cotacao_valor'>R$ <span id="cotacao-usd"></span></p>
           </div>
         </div>
 
         <div class="col-lg-2 col-12">
           <div class="gda_cotacao_card">
             <h5 class="gda_cotacao_title">Euro - EUR</h5>
-            <p class='gda_cotacao_valor'>R$ <span id="cotacao-eur">
-                <script>
-                  carregarCotacoes()
-                </script>
-              </span></p>
+            <p class='gda_cotacao_valor'>R$ <span id="cotacao-eur"></span></p>
           </div>
         </div>
 
@@ -122,11 +114,7 @@
         <div class="col-lg-2 col-12">
           <div class="gda_cotacao_card">
             <h5 class="gda_cotacao_title">Guaranies - PYG</h5>
-            <p class='gda_cotacao_valor'>R$ <span id="cotacao-pyg">
-                <script>
-                  carregarCotacoes()
-                </script>
-              </span></p>
+            <p class='gda_cotacao_valor'>R$ <span id="cotacao-pyg"></span></p>
             </p>
           </div>
         </div>
@@ -134,11 +122,7 @@
         <div class="col-lg-2 col-12">
           <div class="gda_cotacao_card">
             <h5 class="gda_cotacao_title">Libras Esterfinas - GBP</h5>
-            <p class='gda_cotacao_valor'>R$ <span id="cotacao-gbp">
-                <script>
-                  carregarCotacoes()
-                </script>
-              </span></p>
+            <p class='gda_cotacao_valor'>R$ <span id="cotacao-gbp"></span></p>
             </p>
           </div>
         </div>
@@ -146,11 +130,7 @@
         <div class="col-lg-2 col-12">
           <div class="gda_cotacao_card">
             <h5 class="gda_cotacao_title">Dolar Canadense</h5>
-            <p class='gda_cotacao_valor'>R$ <span id="cotacao-cad">
-                <script>
-                  carregarCotacoes()
-                </script>
-              </span></p>
+            <p class='gda_cotacao_valor'>R$ <span id="cotacao-cad"></span></p>
           </div>
         </div>
       </div>

@@ -418,7 +418,8 @@ footer ul li a {
 }
 .gda_footer_logo{
 	height: 100px;
-	margin-right: 5%;
+	/* a imagem tem uma sobra transparente à esquerda; compensa para centralizar o desenho */
+	margin-left: -8px;
 }
 .icon-footer{
 	padding: 0 10px;

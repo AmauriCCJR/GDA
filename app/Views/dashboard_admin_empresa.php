@@ -17,7 +17,7 @@
         <div class="gda-topbar-user-name">Administrador Empresa Cliente</div>
         <div class="gda-topbar-user-email">admin@gda.com.br</div>
       </div>
-      <a href="<?= base_url('/') ?>">
+      <a href="<?= base_url('loading-signout') ?>">
       <div class="gda-avatar">AC</div>
       </a>
   </header>

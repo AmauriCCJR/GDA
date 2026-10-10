@@ -49,7 +49,7 @@
 
 <body class="gda-loading-screen">
 
-  <img src="../assets/img/logo.png" alt="GDA" class="gda-loading-logo">
+  <img src="<?= base_url('assets/img/logo.png') ?>" alt="GDA" class="gda-loading-logo">
 
   <div class="gda-orbit-ring" id="gdaRing">
     <div class="gda-orb"></div>
@@ -98,7 +98,7 @@
     requestAnimationFrame(frame);
 
     setTimeout(function() {
-      var dest = new URLSearchParams(window.location.search).get('dest') || 'index.php';
+      var dest = new URLSearchParams(window.location.search).get('dest') || '<?= base_url('/') ?>';
       window.location.href = dest;
     }, 3000);
   </script>

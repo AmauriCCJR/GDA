@@ -53,7 +53,7 @@
 
       <div class="col-12 col-lg-3 col-md-6 d-flex justify-content-center">
         <section class="gda_services_card " style="--corVariavel: #2563EB">
-          <img src="../assets/img/Importar.png" class="gda_icon_home" alt="...">
+          <img src="<?= base_url('assets/img/Importar.png') ?>" class="gda_icon_home" alt="...">
           <h5 class="gda_services_card_title">Importação</h5>
           <p class="card-text">Gestão completa de processos de importação com controle de documentos e prazos</p>
         </section>
@@ -61,7 +61,7 @@
 
       <div class="col-12 col-lg-3 col-md-6 d-flex justify-content-center">
         <section class="gda_services_card " style="--corVariavel: #00806a">
-          <img src="../assets/img/Exportar.png" class="gda_icon_home" alt="...">
+          <img src="<?= base_url('assets/img/Exportar.png') ?>" class="gda_icon_home" alt="...">
           <h5 class="gda_services_card_title">Exportação</h5>
           <p class="card-text">Acompanhamento de exportações com validação de documentos</p>
         </section>
@@ -69,7 +69,7 @@
 
       <div class="col-12 col-lg-3 col-md-6 d-flex justify-content-center">
         <section class="gda_services_card " style="--corVariavel: #FFCD29">
-          <img src="../assets/img/Banco.png" class="gda_icon_home" alt="...">
+          <img src="<?= base_url('assets/img/Banco.png') ?>" class="gda_icon_home" alt="...">
           <h5 class="gda_services_card_title">Armazenamento</h5>
           <p class="card-text">Controle digital de armazenagem e movimentação de cargas</p>
         </section>
@@ -77,7 +77,7 @@
 
       <div class="col-12 col-lg-3 col-md-6 d-flex justify-content-center">
         <section class="gda_services_card " style="--corVariavel: #FF0000">
-          <img src="../assets/img/Pessoa.png" class="gda_icon_home" alt="...">
+          <img src="<?= base_url('assets/img/Pessoa.png') ?>" class="gda_icon_home" alt="...">
           <h5 class="gda_services_card_title">Consultoria</h5>
           <p class="card-text">Suporte especializado para otimizar suas operações aduaneiras</p>
         </section>
@@ -99,22 +99,14 @@
         <div class="col-lg-2 col-12">
           <div class="gda_cotacao_card">
             <h5 class="gda_cotacao_title">Dólar - USD</h5>
-            <p class='gda_cotacao_valor'>R$ <span id="cotacao-usd">
-                <script>
-                  carregarCotacoes()
-                </script>
-              </span></p>
+            <p class='gda_cotacao_valor'>R$ <span id="cotacao-usd"></span></p>
           </div>
         </div>
 
         <div class="col-lg-2 col-12">
           <div class="gda_cotacao_card">
             <h5 class="gda_cotacao_title">Euro - EUR</h5>
-            <p class='gda_cotacao_valor'>R$ <span id="cotacao-eur">
-                <script>
-                  carregarCotacoes()
-                </script>
-              </span></p>
+            <p class='gda_cotacao_valor'>R$ <span id="cotacao-eur"></span></p>
           </div>
         </div>
 
@@ -122,11 +114,7 @@
         <div class="col-lg-2 col-12">
           <div class="gda_cotacao_card">
             <h5 class="gda_cotacao_title">Guaranies - PYG</h5>
-            <p class='gda_cotacao_valor'>R$ <span id="cotacao-pyg">
-                <script>
-                  carregarCotacoes()
-                </script>
-              </span></p>
+            <p class='gda_cotacao_valor'>R$ <span id="cotacao-pyg"></span></p>
             </p>
           </div>
         </div>
@@ -134,11 +122,7 @@
         <div class="col-lg-2 col-12">
           <div class="gda_cotacao_card">
             <h5 class="gda_cotacao_title">Libras Esterfinas - GBP</h5>
-            <p class='gda_cotacao_valor'>R$ <span id="cotacao-gbp">
-                <script>
-                  carregarCotacoes()
-                </script>
-              </span></p>
+            <p class='gda_cotacao_valor'>R$ <span id="cotacao-gbp"></span></p>
             </p>
           </div>
         </div>
@@ -146,11 +130,7 @@
         <div class="col-lg-2 col-12">
           <div class="gda_cotacao_card">
             <h5 class="gda_cotacao_title">Dolar Canadense</h5>
-            <p class='gda_cotacao_valor'>R$ <span id="cotacao-cad">
-                <script>
-                  carregarCotacoes()
-                </script>
-              </span></p>
+            <p class='gda_cotacao_valor'>R$ <span id="cotacao-cad"></span></p>
           </div>
         </div>
       </div>
@@ -237,7 +217,7 @@
               <p class=""><i class="fa-regular fa-circle-check gda_color_5"></i> Suporte por Whatsapp</p>
               <p class=""><i class="fa-regular fa-circle-check gda_color_5"></i> Relatórios básicos</p>
             </div>
-            <a href="#" class="btn btn-outline-success">Começar Agora</a>
+            <a href="<?= base_url('solicitar-acesso') ?>" class="btn btn-outline-success">Começar Agora</a>
           </div>
 
           <div class="col-lg-3 col-md-6 col-10 gda_planos_card gda_plano_ativo">
@@ -251,7 +231,7 @@
               <p class=""><i class="fa-regular fa-circle-check gda_color_5"></i> Suporte por Whatsapp</p>
               <p class=""><i class="fa-regular fa-circle-check gda_color_5"></i> Relatórios avançados</p>
             </div>
-            <a href="#" class="btn btn-success">Começar Agora</a>
+            <a href="<?= base_url('solicitar-acesso') ?>" class="btn btn-success">Começar Agora</a>
           </div>
 
           <div class="col-lg-3 col-md-6 col-10 gda_planos_card">
@@ -265,7 +245,7 @@
               <p class=""><i class="fa-regular fa-circle-check gda_color_5"></i> Suporte 24/7 dedicado</p>
               <p class=""><i class="fa-regular fa-circle-check gda_color_5"></i> Treinamento presencial</p>
             </div>
-            <a href="#" class="btn btn-outline-success">Começar Agora</a>
+            <a href="<?= base_url('solicitar-acesso') ?>" class="btn btn-outline-success">Começar Agora</a>
           </div>
       </section>
     </div>

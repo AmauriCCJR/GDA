@@ -166,67 +166,55 @@ function esconderErros(CampoUm, CampoDois, CampoTres) {
 }
 
 function login() {
-  const btnEntrar = document.getElementById('btnEntrar');
-  var btnEmail = document.getElementById('emailInput');
-  var btnSenha = document.getElementById('senhaInput');
-  let campoLogin = document.getElementById('erro_login');
-  let msgErroLogin = document.getElementById('msg_erro_login');
+  const email = document.getElementById('emailInput');
+  const senha = document.getElementById('senhaInput');
+  const campoLogin = document.getElementById('erro_login');
 
-  if (btnEmail.value == 'admin' && btnSenha.value == 'admin') {
-    btnEntrar.href = "loading_login.php";
+  if (email.value === 'admin' && senha.value === 'admin') {
+    window.location.href = BASE_URL + 'loading-login';
   } else {
-    mostrarErros(campoLogin);
-    campoLogin.classList.remove('erros_form');
-    campoLogin.classList.add('erros_login');
-    alterarCorDoInput(btnEmail);
-    alterarCorDoInput(btnSenha);
+    campoLogin.classList.remove('esconder');
+    campoLogin.classList.add('mostrar', 'erros_login');
+    alterarCorDoInput(email);
+    alterarCorDoInput(senha);
   }
 }
 
-async function getCotacao(siglaPais) {
-  const token = '64072b1d9c4f1ea12f3d0d530ce10cfbaeffe55916fd73d0fa3d8e7e7a9cdab6';
-  const url = `https://economia.awesomeapi.com.br/json/last/${siglaPais}?token=${token}`;
-
-  try {
-    const response = await fetch(url);
-
-    if (!response.ok) return 'Erro ao consultar API';
-
-    const data = await response.json();
-    const chave = siglaPais.replace('-', '');
-    const cotacao = data[chave]?.bid ?? 'Cotação não encontrada';
-
-    if (typeof cotacao !== 'number' && isNaN(parseFloat(cotacao))) {
-      return cotacao;
-    }
-
-    const decimais = siglaPais === 'PYG-BRL' ? 6 : 2;
-
-    return parseFloat(cotacao).toLocaleString('pt-BR', {
-      minimumFractionDigits: decimais,
-      maximumFractionDigits: decimais,
-    });
-  } catch (error) {
-    return 'Erro ao consultar API';
-  }
-}
 
 async function carregarCotacoes() {
-  const elementos = [
-    ['cotacao-usd', 'USD-BRL'],
-    ['cotacao-eur', 'EUR-BRL'],
-    ['cotacao-pyg', 'PYG-BRL'],
-    ['cotacao-gbp', 'GBP-BRL'],
-    ['cotacao-cad', 'CAD-BRL'],
-  ];
+  if (!document.getElementById('cotacao-usd')) return;
+  if (!document.getElementById('cotacao-eur')) return;
+  if (!document.getElementById('cotacao-gbp')) return;
+  if (!document.getElementById('cotacao-cad')) return;
+  if (!document.getElementById('cotacao-pyg')) return;
+  try {
+    const response = await fetch(BASE_URL + 'cotacao');
+    if (!response.ok) throw new Error('Resposta inválida: ' + response.status);
+    const data = await response.json();
 
-  for (const [id, sigla] of elementos) {
-    const el = document.getElementById(id);
-    if (el) {
-      el.textContent = await getCotacao(sigla);
+    const moedas = {
+      'cotacao-usd': { chave:'USDBRL', casas: 2},
+      'cotacao-eur': { chave:'EURBRL', casas: 2},
+      'cotacao-gbp': { chave:'GBPBRL', casas: 2},
+      'cotacao-cad': { chave:'CADBRL', casas: 2},
+      'cotacao-pyg': {chave:'PYGBRL', casas: 5}
+    };
+
+    for (const [id, {chave, casas}] of Object.entries(moedas)) {
+      const el = document.getElementById(id);
+      if (el && data[chave]) {
+        el.textContent = parseFloat(data[chave].bid).toLocaleString('pt-BR', {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: casas,
+        });
+      }
     }
+  } catch (error) {
+    console.error('Erro ao carregar cotações:', error);
   }
 }
+document.addEventListener('DOMContentLoaded', carregarCotacoes);
+
 function toggleSenha() {
   const input = document.getElementById('senhaInput');
   const icon = document.getElementById('olhoIcon');
@@ -249,7 +237,7 @@ document.querySelectorAll('.gda_filter_btn').forEach(btn => {
     });
   });
 });
-document.getElementById('faqSearch').addEventListener('input', function () {
+document.getElementById('faqSearch')?.addEventListener('input', function () {
   const q = this.value.toLowerCase();
   document.querySelectorAll('.gda_faq_item').forEach(item => {
     item.style.display = item.innerText.toLowerCase().includes(q) ? '' : 'none';

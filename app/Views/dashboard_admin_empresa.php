@@ -2,14 +2,14 @@
 <html lang="pt-BR">
 <head>
   <?php include 'includes/head.php'; ?>
-  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="<?= base_url('assets/css/dashboard.css') ?>">
 </head>
 <body class="gda-dash-body">
 
   <!-- TOPBAR -->
   <header class="gda-topbar">
     <div class="gda-topbar-brand">
-      <img src="../assets/img/logo.png" alt="GDA" class="gda-topbar-logo">
+      <img src="<?= base_url('assets/img/logo.png') ?>" alt="GDA" class="gda-topbar-logo">
       <span class="gda-topbar-title">Painel Administrativo</span>
     </div>
     <div class="gda-topbar-user">
@@ -17,7 +17,7 @@
         <div class="gda-topbar-user-name">Administrador Empresa Cliente</div>
         <div class="gda-topbar-user-email">admin@gda.com.br</div>
       </div>
-      <a href="<?= base_url('/') ?>">
+      <a href="<?= base_url('loading-signout') ?>">
       <div class="gda-avatar">AC</div>
       </a>
   </header>
@@ -258,7 +258,7 @@
       <?php endfor; ?>
 
       <div class="text-center mt-2">
-        <a href="#" class="gda-ver-todas">
+        <a href="<?= base_url('dashboard-admin-empresa') ?>" class="gda-ver-todas">
           Ver todas as notificações <i class="fa-solid fa-arrow-right"></i>
         </a>
       </div>

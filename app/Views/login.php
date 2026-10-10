@@ -45,7 +45,7 @@
         <a href="<?= base_url('recuperar-senha') ?>" class="gda_forgot_link">Esqueci minha senha</a>
       </div>
 
-      <a class="btn btn-success w-100 gda_btn_login gda_cor_btn" href="#" id="btnEntrar" onclick="login()">Entrar</a>
+      <button type="button" class="btn btn-success w-100 gda_btn_login gda_cor_btn" id="btnEntrar" onclick="login()">Entrar</button>
 
       <hr class="gda_login_divider">
 

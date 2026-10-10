@@ -9,7 +9,7 @@
   <!-- TOPBAR -->
   <header class="gda-topbar">
     <div class="gda-topbar-brand">
-      <img src="../assets/img/logo.png" alt="GDA" class="gda-topbar-logo">
+      <img src="<?= base_url('assets/img/logo.png') ?>" alt="GDA" class="gda-topbar-logo">
       <span class="gda-topbar-title">Painel Administrativo da Plataforma</span>
     </div>
     <div class="gda-topbar-user">
@@ -31,7 +31,7 @@
     <a href="#" class="gda-tab">
       <i class="fa-regular fa-file-lines"></i> Processos
     </a>
-    <a href="<?= base_url('dashboard-admin-plataforma') ?>" class="gda-tab">
+    <a href="<?= base_url('empresas-admin-plataforma') ?>" class="gda-tab">
       <i class="fa-solid fa-building"></i> Empresas
     </a>
     <a href="#" class="gda-tab">
@@ -236,7 +236,7 @@
       <?php endfor; ?>
 
       <div class="text-center mt-2">
-        <a href="#" class="gda-ver-todas">
+        <a href="<?= base_url('dashboard-admin-plataforma') ?>" class="gda-ver-todas">
           Ver todas as movimentações <i class="fa-solid fa-arrow-right"></i>
         </a>
       </div>

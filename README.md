@@ -21,6 +21,7 @@
 * Correção da formatação do código padrão MVC
 * Correção do Bug de Links
 * Redução no numero de arquivos totais
+* Adicionado Versão Inicial do Banco de Dados
 
 ### Versão 0.2.1
   * Adicionado paginas de redefinição de senha

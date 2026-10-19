@@ -1,5 +1,5 @@
 # GDA - Gestão de Despachos Aduaneiros
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge) ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=VERSÃO&message=0.2.1&color=0099ff&style=for-the-badge)
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge) ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=VERSÃO&message=0.2.2&color=0099ff&style=for-the-badge)
 
 <h2>Repositório para TCC do curso Sistemas para Internet (Tecnólogo) <br /><br>Instituição: Fatec São Roque  - 2024-2026</h2> 
 
@@ -8,13 +8,19 @@
 
 
 ## Ferramentas utilizadas
-- Javascript
-- PHP 
+- Javascript Vanila
+- PHP / PHPMailer
 - MySQL
 - CodeIgniter 4
 
 
 ## Versões
+
+### Versão 0.2.2
+* Adicionando Paginas do dashboard
+* Correção da formatação do código padrão MVC
+* Correção do Bug de Links
+* Redução no numero de arquivos totais
 
 ### Versão 0.2.1
   * Adicionado paginas de redefinição de senha

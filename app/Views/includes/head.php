@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="<?= base_url('assets/css/everypage.css') ?>">
 <link rel="stylesheet" href="<?= base_url('assets/css/main.css') ?>">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-<script>const BASE_URL = '<?= base_url() ?>';</script>
+<meta name="base-url" content="<?= base_url() ?>">
 <script src="<?= base_url('assets/js/main.js') ?>" defer></script>
 <?php
     helper('url');

@@ -4,8 +4,13 @@ namespace App\Controllers;
 
 class EmpresasAdminPlataforma extends BaseController
 {
-    public function index()
+    public function detalhes()
     {
-        return view('empresas_admin_plataforma');
+        return view('detalhes_empresa');
+    }
+
+    public function cadastrar()
+    {
+        return view('cadastrar_empresa', ['editar' => (bool) $this->request->getGet('editar')]);
     }
 }

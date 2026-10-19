@@ -52,7 +52,7 @@
     <div class="row gda_servicos_completos g-4 justify-content-center">
 
       <div class="col-12 col-lg-3 col-md-6 d-flex justify-content-center">
-        <section class="gda_services_card " style="--corVariavel: #2563EB">
+        <section class="gda_services_card gda_services_card--azul">
           <img src="<?= base_url('assets/img/Importar.png') ?>" class="gda_icon_home" alt="...">
           <h5 class="gda_services_card_title">Importação</h5>
           <p class="card-text">Gestão completa de processos de importação com controle de documentos e prazos</p>
@@ -60,7 +60,7 @@
       </div>
 
       <div class="col-12 col-lg-3 col-md-6 d-flex justify-content-center">
-        <section class="gda_services_card " style="--corVariavel: #00806a">
+        <section class="gda_services_card gda_services_card--verde">
           <img src="<?= base_url('assets/img/Exportar.png') ?>" class="gda_icon_home" alt="...">
           <h5 class="gda_services_card_title">Exportação</h5>
           <p class="card-text">Acompanhamento de exportações com validação de documentos</p>
@@ -68,7 +68,7 @@
       </div>
 
       <div class="col-12 col-lg-3 col-md-6 d-flex justify-content-center">
-        <section class="gda_services_card " style="--corVariavel: #FFCD29">
+        <section class="gda_services_card gda_services_card--amarelo">
           <img src="<?= base_url('assets/img/Banco.png') ?>" class="gda_icon_home" alt="...">
           <h5 class="gda_services_card_title">Armazenamento</h5>
           <p class="card-text">Controle digital de armazenagem e movimentação de cargas</p>
@@ -76,7 +76,7 @@
       </div>
 
       <div class="col-12 col-lg-3 col-md-6 d-flex justify-content-center">
-        <section class="gda_services_card " style="--corVariavel: #FF0000">
+        <section class="gda_services_card gda_services_card--vermelho">
           <img src="<?= base_url('assets/img/Pessoa.png') ?>" class="gda_icon_home" alt="...">
           <h5 class="gda_services_card_title">Consultoria</h5>
           <p class="card-text">Suporte especializado para otimizar suas operações aduaneiras</p>

@@ -15,6 +15,11 @@
 
     <div class="gda_login_card">
       <h2 class="gda_login_title">Acesse sua Conta</h2>
+      <?php if (session()->getFlashdata('aviso')): ?>
+      <div class="gda_aviso_sucesso" role="status">
+        <i class="fa-solid fa-circle-check"></i> <?= esc(session()->getFlashdata('aviso')) ?>
+      </div>
+      <?php endif; ?>
       <div class="erro_login esconder" id="erro_login">
         <p class="msg_erro_login" id="msg_erro_login"><i class="fa-solid fa-circle-exclamation"></i> E-mail ou senha incorretos. Verifique suas credenciais e tente novamente.</p>
       </div>
@@ -61,8 +66,5 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    
-  </script>
 </body>
 </html>

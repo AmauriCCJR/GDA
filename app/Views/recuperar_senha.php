@@ -16,12 +16,17 @@
     <form class="gda_login_card" method="post" action="<?= base_url('recuperar-senha') ?>">
       <h2 class="gda_login_title">Recuperar Senha</h2>
       <p class="gda_recover_desc">Digite seu e-mail para receber instruções</p>
+      <?php if (session()->getFlashdata('erro')): ?>
+      <div class="gda_aviso_erro" role="alert">
+        <i class="fa-solid fa-circle-exclamation"></i> <?= esc(session()->getFlashdata('erro')) ?>
+      </div>
+      <?php endif; ?>
 
       <div class="mb-4">
         <label class="form-label gda_form_label">E-mail</label>
         <div class="gda_input_icon_wrap">
           <i class="fa-regular fa-envelope gda_input_icon"></i>
-          <input type="email" class="form-control gda_login_input gda_input_with_icon_right" placeholder="seu@email.com" name="destinatario" id="destinatario">
+          <input type="email" class="form-control gda_login_input gda_input_with_icon_right" placeholder="seu@email.com" name="destinatario" id="destinatario" required>
         </div>
       </div>
 

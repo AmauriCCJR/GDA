@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.gda-loading-screen {
+  background-color: #00826d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 48px;
+  overflow: hidden;
+}
+
+.gda-loading-logo {
+  width: 80px;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+
+.gda-orbit-ring {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.gda-orb {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  margin: -7px 0 0 -7px;
+  will-change: transform, opacity;
+}

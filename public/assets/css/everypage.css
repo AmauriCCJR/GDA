@@ -430,3 +430,28 @@
   font-weight: 500;
   margin: 0;
 }
+
+/* ========================================
+   AVISOS (login / recuperar senha)
+======================================== */
+.gda_aviso_sucesso,
+.gda_aviso_erro {
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.gda_aviso_sucesso {
+  background: #e6f7e7;
+  border: 1px solid #14AE5C;
+  color: #0b3d2e;
+}
+
+.gda_aviso_sucesso i { color: #14AE5C; }
+
+.gda_aviso_erro {
+  background: #fdecea;
+  border: 1px solid #e74c3c;
+  color: #a12a1e;
+}

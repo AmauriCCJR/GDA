@@ -16,9 +16,15 @@ $routes->get('recuperar-senha', 'RecuperarSenha::index');
 $routes->post('recuperar-senha', 'RecuperarSenha::enviar');
 $routes->get('redefinir-senha', 'RedefinirSenha::index');
 $routes->match(['GET', 'POST'], 'senha-alterada', 'SenhaAlterada::index');
-$routes->get('dashboard-admin-plataforma', 'DashboardAdminPlataforma::index');
-$routes->get('empresas-admin-plataforma', 'EmpresasAdminPlataforma::index');
-$routes->get('dashboard-admin-empresa', 'DashboardAdminEmpresa::index');
 $routes->get('loading-login', 'LoadingLogin::index');
 $routes->get('loading-signout', 'LoadingSignout::index');
 $routes->get('cotacao', 'Cotacao::index');
+
+// Áreas logadas (perfil via ?perfil= até existir o login com RBAC)
+$routes->get('dashboard', 'Dashboard::index');
+$routes->get('movimentacoes', 'Movimentacoes::index');
+$routes->get('movimentacoes/detalhes/(:num)', 'Movimentacoes::detalhes/$1');
+
+// Admin da plataforma
+$routes->get('detalhes-empresa', 'EmpresasAdminPlataforma::detalhes');
+$routes->get('cadastrar-empresa', 'EmpresasAdminPlataforma::cadastrar');

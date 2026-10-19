@@ -144,6 +144,11 @@ body {
 	margin: 0 auto;
 }
 
+.gda_services_card--azul     { --corVariavel: #2563EB; }
+.gda_services_card--verde    { --corVariavel: #00806a; }
+.gda_services_card--amarelo  { --corVariavel: #FFCD29; }
+.gda_services_card--vermelho { --corVariavel: #FF0000; }
+
 .gda_services_card:hover {
 	border: 2px solid var(--corVariavel);
 	box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.3);

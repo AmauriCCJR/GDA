@@ -1,4 +1,6 @@
 
+const BASE_URL = document.querySelector('meta[name="base-url"]')?.content || '/';
+
 function enviarWhatsApp() {
   var erro = "";
   const erros_form = document.getElementById('erros_form');
@@ -170,8 +172,17 @@ function login() {
   const senha = document.getElementById('senhaInput');
   const campoLogin = document.getElementById('erro_login');
 
-  if (email.value === 'admin' && senha.value === 'admin') {
-    window.location.href = BASE_URL + 'loading-login';
+  // Login simulado: cada usuário de teste abre o dashboard do seu perfil (usuário = senha)
+  const dashboards = {
+    admin: 'dashboard',
+    empresa: 'dashboard?perfil=empresa',
+    funcionario: 'dashboard?perfil=funcionario',
+    cliente: 'dashboard?perfil=cliente',
+  };
+  const destino = dashboards[email.value.trim().toLowerCase()];
+
+  if (destino && senha.value === email.value.trim().toLowerCase()) {
+    window.location.href = BASE_URL + 'loading-login?dest=' + encodeURIComponent(BASE_URL + destino);
   } else {
     campoLogin.classList.remove('esconder');
     campoLogin.classList.add('mostrar', 'erros_login');
@@ -182,11 +193,8 @@ function login() {
 
 
 async function carregarCotacoes() {
-  if (!document.getElementById('cotacao-usd')) return;
-  if (!document.getElementById('cotacao-eur')) return;
-  if (!document.getElementById('cotacao-gbp')) return;
-  if (!document.getElementById('cotacao-cad')) return;
-  if (!document.getElementById('cotacao-pyg')) return;
+  // Index exibe as 5 moedas; os dashboards exibem 4 (sem CAD) — preenche só as que existirem
+  if (!document.querySelector('[id^="cotacao-"]')) return;
   try {
     const response = await fetch(BASE_URL + 'cotacao');
     if (!response.ok) throw new Error('Resposta inválida: ' + response.status);
@@ -248,7 +256,12 @@ document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(btn => {
   const collapseEl = document.querySelector(targetId);
   const chevron = btn.querySelector('.gda_faq_chevron');
   if (collapseEl && chevron) {
-    collapseEl.addEventListener('show.bs.collapse', () => chevron.classList.add('gda_chevron_open'));
+    collapseEl.addEventListener('show.bs.collapse', () => {
+      chevron.classList.add('gda_chevron_open');
+      document.querySelectorAll('.collapse.show').forEach(aberto => {
+        if ('#' + aberto.id !== targetId) bootstrap.Collapse.getInstance(aberto)?.hide();
+      });
+    });
     collapseEl.addEventListener('hide.bs.collapse', () => chevron.classList.remove('gda_chevron_open'));
   }
 });

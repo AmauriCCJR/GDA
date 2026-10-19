@@ -1,3 +1,7 @@
 # Arquivos locais de contexto (não versionar)
 CONTEXTO.md
 Images_for_context/
+writable/*
+!writable/*/index.html
+!writable/index.html
+!writable/.htaccess
